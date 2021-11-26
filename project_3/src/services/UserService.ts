@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import User from "../models/User";
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
@@ -23,4 +23,17 @@ const baseUrl = process.env.REACT_APP_API_URL;
 //     .then(res => res.data)
 //   }
 
+
+
+
+
+export function fetchUsers():Promise<User[]> {
+    return axios.get(`${baseUrl}/users`)
+    .then(res => res.data)
+  }
+  
+  export function addUser(newUser:User):Promise<User> {
+    return axios.post(`${baseUrl}/users`, newUser).then(res => res.data);
+  }
+  
 

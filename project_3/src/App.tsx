@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
+import UsersList from './components/UsersList';
+import User from "./models/User";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<UsersList users={[]} />} />   {/* CAC: I added the users={[]} part
+         because I had "exact" with the path (I had copied it from somewhee), but VSCode did not like it, 
+         so I removed that word, which made VSCode not like <UsersList>.  When I 
+         did a QuickFix on that error, VSCode added the users{[]} part. */}
+        
+        </Routes>
+      </Router>
+
     </div>
   );
 }
 
 export default App;
+
+
