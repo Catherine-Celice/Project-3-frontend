@@ -2,6 +2,7 @@ import User from "../models/User";
 import UserLink from "./UserLink";
 import './UsersList.css';
 
+
 interface Props {
   users: User[]
 }

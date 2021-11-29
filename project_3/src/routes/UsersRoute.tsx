@@ -1,10 +1,11 @@
+// The route is to let us see all registered users in order to test our database and API code.
+
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from 'react-router-dom';
 import User from "../models/User";
 import { fetchUsers } from "../services/UserService";
-import { addUser } from "../services/UserService";
 import UsersList from "../components/UsersList";
-
+import { addUser } from "../services/UserService";
 
 
 function UsersRoute() {
