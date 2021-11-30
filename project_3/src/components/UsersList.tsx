@@ -12,8 +12,7 @@ function UsersList({users}: Props) {
     <div className="UserList">
       <ul>
         {users.map(user => <li key={user._id}>
-
-          <span className="UserList__first">- user <UserLink user={user.firstname} /></span>
+          <span className="UserList__first">{user.firstname} </span>
           <span className="UserList__last">{user.lastname}</span>
         </li>)}
       </ul>
