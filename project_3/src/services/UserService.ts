@@ -1,28 +1,11 @@
 import axios from "axios";
 import User from "../models/User";
 
-const baseUrl = process.env.REACT_APP_API_URL;
-
-
-// The following code was copied from Megan's firebase lab 
-// to be used as a template when writing out code:
-
-
-  
-//   export function fetchShoutOutsTo(user: string):Promise<ShoutOut[]> {
-//     return axios.get(`${baseUrl}/shoutouts`, {
-//       params: { to: user }
-//     })
-//     .then(res => res.data)
-//   }
-
-
-
+const baseUrl = 'https://us-central1-project-3-2f2c3.cloudfunctions.net/api'
 
 // CAC: untested
 export function fetchUsers():Promise<User[]> {
-    return axios.get(`${baseUrl}/users`)
-    .then(res => res.data)
+    return axios.get<User[]>(`${baseUrl}/users`).then(res => res.data);
   }
   
 // CAC: untested
