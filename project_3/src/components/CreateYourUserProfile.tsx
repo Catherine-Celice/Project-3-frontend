@@ -71,20 +71,20 @@ interface Props {
     }
   
     // copied from Megan' firebase labs as a template
-    return (
-      <form className="AddShoutOutForm" onSubmit={handleSubmit}>
-        <h3>Leave a Shout Out</h3>
-        <FormInput label="To" id="AddShoutOutForm__to" value={to} onChange={setTo} required minLength={2}/>
-        <FormInput label="From" id="AddShoutOutForm__from" value={from} onChange={setFrom} required minLength={2}/>
-        <p className="FormInput">
-          <label htmlFor="AddShoutOutForm__shoutout">Shout Out</label>
-          <textarea id="AddShoutOutForm__shoutout" value={text}  onChange={e => setText(e.target.value)} required minLength={2} rows={4}/>
-        </p>
-        <p>
-          <button>Submit Shout Out!</button>
-        </p>
-      </form>
-    );
+  //  return (
+  //    <form className="AddShoutOutForm" onSubmit={handleSubmit}>
+  //      <h3>Leave a Shout Out</h3>
+  //      <FormInput label="To" id="AddShoutOutForm__to" value={to} onChange={setTo} required minLength={2}/>
+  //      <FormInput label="From" id="AddShoutOutForm__from" value={from} onChange={setFrom} required minLength={2}/>
+  //      <p className="FormInput">
+  //        <label htmlFor="AddShoutOutForm__shoutout">Shout Out</label>
+  //        <textarea id="AddShoutOutForm__shoutout" value={text}  onChange={e => setText(e.target.value)} required minLength={2} rows={4}/>
+  //      </p>
+  //      <p>
+  //        <button>Submit Shout Out!</button>
+  //      </p>
+  //    </form>
+  //  );
   }
   
-  export default CreateYourProfile;
+  export default CreateYourUserProfile;

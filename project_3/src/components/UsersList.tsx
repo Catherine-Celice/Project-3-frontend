@@ -1,6 +1,6 @@
 import User from "../models/User";
 import UserLink from "./UserLink";
-import './UsersList.css';
+//import './UsersList.css';
 
 
 interface Props {
