@@ -1,16 +1,11 @@
 // CAC: This needs MAJOR rework
-
-
 import { FormEvent, useEffect, useState } from "react";
-
 import User from "../models/User";
 import UserLink from "./UserLink";
 import UsersList from "./UsersList";
 
 //import { fetchUsers } from "../services/UserService";
 import { addUser } from "../services/UserService";
-
-import CreateYourUserProfileFormInput from "./CreateYourUserProfileFormInput";
 import './CreateYourUserProfile.css';
 
 
@@ -59,13 +54,13 @@ interface Props {
           // TO DO -- what will we do if the passwords enteed don't match each other
       }  
       
-      return (
-          <form className="CPform" onSubmit={handleSubmit}>
-              <h2>Crete Your Profile</h2>
-              <CreateYourUserProfileFormInput id="CPForm_firstname" value={firstname} onChange={setFirstname} required minlength={2}/>
+//      return (
+//          <form className="CPform" onSubmit={handleSubmit}>
+//              <h2>Crete Your Profile</h2>
+//              <CreateYourUserProfileInputForm id="CPForm_firstname" value={firstname} onChange={setFirstname} required minlength={2}/>
 
-          </form>
-      )
+//          </form>
+ //     )
       
 
     }
