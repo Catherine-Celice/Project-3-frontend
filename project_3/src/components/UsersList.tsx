@@ -11,6 +11,7 @@ interface Props {
 function UsersList({users}: Props) {
   return (
     <div className="UserList">
+<<<<<<< HEAD
       <form className="Profile">
         {users.map(user => <div className="User" key={user._id}>
           <p>
@@ -35,6 +36,14 @@ function UsersList({users}: Props) {
           </p>
         </div>)}
       </form>
+=======
+      <ul>
+        {users.map(user => <li key={user._id}>
+          <span className="UserList__first">{user.firstname} </span>
+          <span className="UserList__last">{user.lastname}</span>
+        </li>)}
+      </ul>
+>>>>>>> origin/main
     </div>
   );
 }
