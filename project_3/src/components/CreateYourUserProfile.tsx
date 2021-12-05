@@ -23,7 +23,7 @@ interface Props {
     const [ lastname, setLastname ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ phone, setPhone ] = useState("");
-    const [ userID, setUserID ] = useState("");
+//    const [ userID, setUserID ] = useState("");
     const [ password1, setPassword1] = useState("");
     const [ password2, setPassword2] = useState("");
 
@@ -40,13 +40,13 @@ interface Props {
       // TO DO: we need to write an else part -- in case password1 and password2 don't match
       if(checkPasswords(password1, password2)){
         addUser({
-            firstname, lastname, email, phone, userID, password1
+            firstname, lastname, email, phone, password1
           }).then(onAdd);
           setFirstname("");
           setLastname("");
           setEmail("");
           setPhone("");
-          setUserID("");
+//          setUserID("");
           setPassword1("");
           setPassword2("");
 

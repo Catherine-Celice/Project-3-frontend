@@ -4,8 +4,9 @@ import User from "../models/User";
 const baseUrl = 'https://us-central1-project-3-2f2c3.cloudfunctions.net/api'
 
 // CAC: untested
-export function fetchUsers():Promise<User[]> {
-    return axios.get<User[]>(`${baseUrl}/users`).then(res => res.data);
+export function fetchUser(email: string):Promise<User> {
+    return axios.get(`${baseUrl}/users/${encodeURIComponent(email)}`)
+    .then(res => res.data[0]);
   }
   
 // CAC: untested
