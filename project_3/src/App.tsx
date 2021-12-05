@@ -6,7 +6,8 @@ import UsersRoute from './routes/UsersRoute';
 
 function App() {
   return (
-    <div className="App">      
+    <div className="App"> 
+    <UsersRoute/>     
     <PetList/>
     </div>
   );

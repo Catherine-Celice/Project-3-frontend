@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Pet from "../models/pet";
+import Pet from "../models/Pet";
 import { getAllPets } from '../services/PetService'
 
 
