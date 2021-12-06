@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -9,9 +10,13 @@ import CreateYourUserProfile from './components/CreateYourUserProfile';
 import UsersList from './components/UsersList';
 import DesktopNav from './components/DesktopNav';
 
+
+// https://blog.logrocket.com/react-router-v6/
+
 function App() {
   return (
     <div className="App"> 
+
     <Router>
       {/* <DesktopNav/> */}
       <Routes>
@@ -20,8 +25,19 @@ function App() {
         <Route path="/myprofile" element={<UsersList/>}/>
       </Routes>
     </Router>
+
     </div>
   );
 }
 
+// function App() {
+//   return (
+//     <div className="App"> 
+//     <UsersRoute/>     
+//     <PetList/>
+//     
+//   );
+// }
+
 export default App;
+
