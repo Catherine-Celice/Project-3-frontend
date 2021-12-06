@@ -7,10 +7,10 @@ export default interface User {
     email: string;
     phone?: string;
     password1: string;
-    image: string;
-    zip: string;
-    aboutme: string;
-    preferences: Preferences;
+    image?: string;
+    zip?: string;
+    aboutme?: string;
+    preferences?: Preferences;
     petList?: string[];
 };
 // CAC: In this (frontend) version of the User I declared _id to be a string rather
