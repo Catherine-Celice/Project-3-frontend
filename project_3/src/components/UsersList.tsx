@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import User from "../models/User";
-import '../styles/UsersList.css';
+import '../styles/UserProfile.css';
 
 //interface Props {
 //  user: User;
@@ -18,7 +18,7 @@ import '../styles/UsersList.css';
     {image: "../public/images/Avatars/dog2_avatar.png", firstname: "Catherine", lastname: "Celice", email: "Catherine123@gmail.com", phone: "875-423-1234", password1: "TooMuchProgramming"},
   ]);
   return (
-    <div className="UserList">
+    <div className="UserProfile">
       <div className="Profile">
         {/* <p>
           <img className="UserList__image">{users[0].image}</img>
