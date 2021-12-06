@@ -34,7 +34,7 @@ export default interface Pet {
     tags?: string[],
     name: string,
     description?: string,
-    photos?: [
+    photos: [
         {
             small: string
             medium: string
