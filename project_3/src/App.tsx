@@ -7,6 +7,7 @@ import UsersRoute from './routes/UsersRoute';
 import CreateYourUserProfile from './components/CreateYourUserProfile';
 import UsersList from './components/UsersList';
 import DesktopNav from './components/DesktopNav';
+import PetProfile from './components/PetProfile';
 
 // https://blog.logrocket.com/react-router-v6/
 
@@ -18,7 +19,10 @@ function App() {
       {/* <DesktopNav/> */}
       <Routes>
         <Route path="/" element={<Homepage/>}/>
-        <Route path="/viewpets" element={<PetList/>}/>
+        <Route path="viewpets">
+          <Route path="/viewpets" element={<PetList/>}/>
+          <Route path=":petId" element={<PetProfile/>}/>
+        </Route>
         <Route path="/myprofile" element={<UsersRoute/>}/>
       </Routes>
     </Router>
