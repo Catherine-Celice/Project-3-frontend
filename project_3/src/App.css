@@ -7,9 +7,50 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.UserProfileRoute {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.UserProfileRoute>h2 {
+  margin-bottom: 120px;
+}
+
+.UserProfileRoute>button {
+  background-color: #8A2387;
+  color: white;
+  width: 90px;
+  height: 35px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+a {
+  font-size: .8em;
+  display: block;
+  width: 100%;
+  background-color: rgb(143, 143, 143);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#dog {
+  position: absolute;
+  bottom: 30px;
+}
+
+#cat {
+  position: absolute;
+  bottom: 0px;
+}
+
 /* Design System Standards */
 h2 {
-  margin: 0;
+  margin: 0px;
   color: #F27121;
   font-size: 80px;
 }
@@ -99,7 +140,6 @@ a:link {
     max-width: 50%;
   }
 
-
   .homebtns {
     justify-content: space-around;
   }
@@ -107,7 +147,6 @@ a:link {
   .signin {
     display: flex;
   }
-
 
 /* User Profile Page */
 body {
@@ -169,10 +208,7 @@ body {
   }
 }
 
-
-
-
-  /* Tablet view */
+/* Tablet view */
   @media (max-width: 1024px) and (min-width: 641px) {
     h2 {
       margin: 0;
