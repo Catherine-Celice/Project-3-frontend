@@ -3,7 +3,7 @@ import Pet from "../models/Pet";
 import { getAllPets } from '../services/PetService'
 
 
-export default function PetList() {
+function PetList() {
     const [ pets, setPets ] = useState<Pet[]>([]);  
     
       function getPetList() {
@@ -30,3 +30,4 @@ export default function PetList() {
       );
   }
 
+export default PetList;

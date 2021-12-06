@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-.UserList {
+.UserProfile {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

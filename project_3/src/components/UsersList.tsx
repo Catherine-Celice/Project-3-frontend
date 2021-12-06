@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import User from "../models/User";
-import '../styles/UsersList.css';
+import '../styles/UserProfile.css';
 
 //interface Props {
 //  user: User;
@@ -20,7 +20,7 @@ import '../styles/UsersList.css';
     ]);
 
   return (
-    <div className="UserList">
+    <div className="UserProfile">
       <div className="Profile">
          <span>
           <img className="UserList__image" src={`../images/Avatars/${users[0].image}.png`} />

@@ -1,6 +1,6 @@
 export default interface Pet {
     id: number,
-    organization_id: string,
+    organization_id?: string,
     url: string,
     type: string,
     species: string,
@@ -10,7 +10,7 @@ export default interface Pet {
         mixed: string,
         unknown: boolean
     },
-    colors: {
+    colors?: {
         primary: string,
         secondary: string,
         tertiary: string
@@ -18,7 +18,7 @@ export default interface Pet {
     age: string,
     gender: string,
     size: string,
-    coat: string,
+    coat?: string,
     attributes: {
         spayed_neutered: boolean,
         house_trained: boolean,
@@ -26,15 +26,15 @@ export default interface Pet {
         special_needs: boolean,
         shots_current: boolean
     },
-    environment: {
+    environment?: {
         children: boolean,
         dogs: boolean,
         cats: boolean
     },
-    tags: string[],
+    tags?: string[],
     name: string,
-    description: string,
-    photos: [
+    description?: string,
+    photos?: [
         {
             small: string
             medium: string
@@ -42,14 +42,14 @@ export default interface Pet {
             full: string
         }
     ],
-    videos: [
+    videos?: [
         {
             embed: string
         }
     ],
-    status: string,
-    published_at: string,
-    contact: {
+    status?: string,
+    published_at?: string,
+    contact?: {
         email: string,
         phone: string,
         address: {
@@ -61,7 +61,7 @@ export default interface Pet {
             country: string
         }
     },
-    _links: {
+    _links?: {
         self: {
             href:string
         },
