@@ -1,0 +1,23 @@
+.Homepage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .HeroContent {
+    margin: 100px 0px;
+    max-width: 500px;
+    min-width: 300px;
+  }
+
+  .HomeImg {
+    max-width: 50%;
+  }
+
+
+  .homebtns {
+    justify-content: space-around;
+  }
+
+  .signin {
+    display: flex;
+  }
