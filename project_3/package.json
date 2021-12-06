@@ -45,5 +45,7 @@
   "devDependencies": {
     "@types/react": "^17.0.37"
   },
-  "proxy": "https://api.petfinder.com"
+  "proxy": "https://api.petfinder.com",
+  "proxy": "http://localhost:3000"
+
 }

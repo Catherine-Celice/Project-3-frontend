@@ -5,3 +5,44 @@
   align-items: center;
   font-family: 'Montserrat', sans-serif;
 }
+
+.UserProfileRoute {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.UserProfileRoute>h2 {
+  margin-bottom: 120px;
+}
+
+.UserProfileRoute>button {
+  background-color: #8A2387;
+  color: white;
+  width: 90px;
+  height: 35px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+a {
+  font-size: .8em;
+  display: block;
+  width: 100%;
+  background-color: rgb(143, 143, 143);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#dog {
+  position: absolute;
+  bottom: 30px;
+}
+
+#cat {
+  position: absolute;
+  bottom: 0px;
+}
