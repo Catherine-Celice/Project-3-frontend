@@ -17,6 +17,7 @@ function checkPasswords(p1: string, p2: string): boolean {
 
 
 // TO DO -- CAC: need to figure out what goes inside this interface
+
 // interface Props {
 //     //initialTo?: string;
 //     onAdd?: (user: User) => void;    // CAC: Should this be onSubmit?
@@ -49,6 +50,8 @@ function CreateYourUserProfile() {
         firstname: firstname, lastname: lastname, email: email, phone: phone,
         password1: password1, zip: zip, aboutme: aboutMe
       };
+
+
 
       addUser(
         newUser

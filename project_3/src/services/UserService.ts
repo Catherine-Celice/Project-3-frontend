@@ -19,5 +19,4 @@ export function fetchUser(email: string, password1: string):Promise<User> {
 export function addUser(newUser:User):Promise<User> {
     return axios.post(`${baseUrl}/users`, newUser).then(res => res.data);
   }
-  
 
