@@ -8,6 +8,10 @@ import UsersList from "./UsersList";
 import { addUser } from "../services/UserService";
 import './CreateYourUserProfile.css';
 
+function checkPasswords(p1: string, p2: string): boolean {
+  return(p1 === p2);
+};
+
 
 //q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24 
 
@@ -26,13 +30,12 @@ interface Props {
 //    const [ userID, setUserID ] = useState("");
     const [ password1, setPassword1] = useState("");
     const [ password2, setPassword2] = useState("");
+    const [ zip, setZip ] = useState("");
 
 
     //useEffect(() => setTo(initialTo), [initialTo]);
   
-    function checkPasswords(p1: string, p2: string): boolean {
-        return(p1 === p2);
-    };
+   
 
 
     function handleSubmit(e: FormEvent) {
@@ -48,7 +51,7 @@ interface Props {
           setPhone("");
 //          setUserID("");
           setPassword1("");
-          setPassword2("");
+          //setPassword2("");
 
       } else {
           // TO DO -- what will we do if the passwords enteed don't match each other

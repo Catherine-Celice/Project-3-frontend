@@ -10,16 +10,18 @@ import { useParams } from "react-router";
 function UsersRoute() {
   //const history = useNavigate();
   const { email } = useParams<string>();
+  const { password1, setPassword1 } = useParams<string>();
   const [ user, setUser ] = useState<User>();  
-  
+
+
     useEffect(() => {
-      if(email) {
-        fetchUser(email).then(res => setUser(res));
+      if(email && password1) {
+        fetchUser(email, password1).then(res => setUser(res));
       }
-      else if(!email) {
+      else if(!email || ! password1) {
         alert('No user found');
       }
-    }, [email]);
+    }, [email, password1]);
   
     return (
       <div className="UserProfileRoute">
