@@ -29,14 +29,14 @@
   border-radius: 10px;
 }
 
-a {
+/* a {
   font-size: .8em;
   display: block;
   width: 100%;
   background-color: rgb(143, 143, 143);
   padding: 10px;
   box-sizing: border-box;
-}
+} */
 
 #dog {
   position: absolute;
