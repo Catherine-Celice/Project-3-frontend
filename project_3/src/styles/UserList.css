@@ -11,7 +11,7 @@ body {
     align-items: center;
     margin: 0px;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
 }
 
 .UserProfile {
@@ -56,31 +56,31 @@ p {
 
 .Profile>p>.first {
     position: absolute;
-    top: 172px;
+    top: 168px;
     left: 70px;
 }
 
 .Profile>p>.last {
     position:absolute;
-    top:211px;
+    top:207px;
     left: 70px;
 }
 
 .Profile>p>.email {
     position: absolute;
-    top: 250px;
+    top: 246px;
     left: 70px;
 }
 
 .Profile>p>.phone {
     position:absolute;
-    top: 289px;
+    top: 284px;
     left: 70px;
 }
 
 .Profile>p>.password {
     position:absolute;
-    top: 329px;
+    top: 324px;
     left: 70px;
 }
 
@@ -92,13 +92,13 @@ p {
 
 .Profile>p>.zip {
     position: absolute;
-    top: 367px;
+    top: 362px;
     left: 70px;
 }
 
 .Profile>p>.aboutMe {
     position: absolute;
-    top: 407px;
+    top: 402px;
     left: 70px;
 }
 
@@ -108,7 +108,7 @@ p {
 
 .Profile>p>.prefrences {
     position: absolute;
-    top: 477px;
+    top: 471px;
     left: 70px;
 }
 
@@ -117,7 +117,64 @@ p {
 
 }
 
-@media (max-width: 640px) and (min-width: 360px) {
-    /* Mobile view */
+@media (min-width: 1025px) {
+    /* Desktop view */
+    .UserProfile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+    }
+    .Profile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 500px;
+        align-items: center;
+        margin: 0px;
+    }
+    
+    .UserList__first {
+        position: absolute;
+        top: 170px;
+    }
 
+    .UserList__last {
+        position: absolute;
+        top: 211px;
+    }
+
+    .UserList__email {
+        position: absolute;
+        top: 250px;
+
+    }
+
+    .UserList__phone {
+        position: absolute;
+        top: 289px;
+
+    }
+
+    .UserList__password {
+        position: absolute;
+        top: 329px;
+    }
+
+    .UserList__zip {
+        position: absolute;
+        top: 367px;
+
+    }
+
+    .UserList__aboutMe {
+        position: absolute;
+        top: 407px;
+    }
+
+    .UserList__prefrences {
+        position: absolute;
+        top: 477px;
+    }
+    
 }

@@ -27,7 +27,7 @@ interface Props {
     const [ lastname, setLastname ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ phone, setPhone ] = useState("");
-//    const [ userID, setUserID ] = useState("");
+    // const [ userID, setUserID ] = useState("");
     const [ password1, setPassword1] = useState("");
     const [ password2, setPassword2] = useState("");
     const [ zip, setZip ] = useState("");
@@ -49,7 +49,7 @@ interface Props {
           setLastname("");
           setEmail("");
           setPhone("");
-//          setUserID("");
+          // setUserID("");
           setPassword1("");
           //setPassword2("");
 
