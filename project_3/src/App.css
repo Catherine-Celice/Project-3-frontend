@@ -11,7 +11,7 @@
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -19,11 +19,11 @@
 .UserProfileRoute>h2 {
   font-size: 2em;
   width: 90%;
-  text-align: center;
+  text-align: left;
   margin-bottom: 120px;
 }
 
-.UserProfileRoute>button {
+.UserProfile__button>button {
   background-color: #8A2387;
   color: white;
   width: 90px;
@@ -31,32 +31,6 @@
   margin: 10px;
   padding: 2px;
   border-radius: 10px;
-}
-
-#dog {
-  position: absolute;
-  width: 100%;
-  display: block;
-  padding: 8px;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: rgb(143, 143, 143);
-  bottom: 20px;
-  font-size: .6em;
-  color: blue;
-}
-
-#cat {
-  position: absolute;
-  width: 100%;
-  display: block;
-  padding: 8px;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: rgb(143, 143, 143);
-  bottom: 0px;
-  font-size: .6em;
-  color: blue;
 }
 
 /* Design System Standards */
@@ -135,6 +109,34 @@ a:link {
   color: black;
 }
 
+#acclaim {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: .8em;
+  width: 100%;
+  padding: 4px;
+  bottom: 0px;
+  margin: 0px auto;
+}
+
+#cat {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+}
+
+#dog {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 14px;
+}
+
+
+
   /* Homepage */
   .Homepage {
     display: flex;
@@ -159,66 +161,6 @@ a:link {
     display: flex;
   }
 
-/* User Profile Page */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 90vh;
-}
-
-/* .UserProfile {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-}
-
-.Profile {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  list-style-type: none;
-}
-
-.User {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 0px;
-} */
-
-/* .UserList__first {
-  border: 1px solid lightslategray;
-  border-radius: 5px;
-  padding: 2px;
-  min-width: 80%;
-}
-
-.UserList__last {
-  border: 1px solid lightslategray;
-  border-radius: 5px;
-  padding: 2px;
-  min-width: 80%;
-} */
-
-  /* Tablet view */
-@media (max-width: 1024px) and (min-width: 641px) {
-  h2 {
-    margin: 0;
-    color: #F27121;
-    font-size: 60px;
-  }
-  
-  h3 {
-    font-weight: lighter;
-    font-size: 22px;
-  }
-}
-
 /* Tablet view */
   @media (max-width: 1024px) and (min-width: 641px) {
     h2 {
@@ -231,10 +173,28 @@ body {
       font-weight: lighter;
       font-size: 22px;
     }
+
+    #acclaim {
+      font-size: .6em;
+    }
+
+    #cat {
+      position: absolute;
+      bottom: 0px;
+    }
+    
+    #dog {
+      position: absolute;
+      bottom: 12px;
+    }
   }
 
   /* Mobile view */
 @media (max-width: 640px) and (min-width: 360px) {
+  .UserProfileRoute>h2 {
+    text-align: center;
+  }
+
   h2 {
     margin: 0;
     color: #F27121;
@@ -261,31 +221,28 @@ body {
     padding: 2px;
     border-radius: 10px;
   }
-  
-  #dog {
-    position: absolute;
-    width: 100%;
-    display: block;
-    padding: 6px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgb(143, 143, 143);
-    bottom: 15px;
-    font-size: .5em;
-    color: blue;
-  }
-  
+
+  /* Formatting for the Avatar author recognition at the bottom of the page */
   #cat {
     position: absolute;
-    width: 100%;
-    display: block;
-    padding: 6px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgb(143, 143, 143);
     bottom: 0px;
+  }
+
+  #dog {
+    position: absolute;
+    bottom: 12px;
+  }
+
+  #acclaim {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     font-size: .5em;
-    color: blue;
+    width: 100%;
+    padding: 4px;
+    bottom: 0px;
+    margin: 0px auto;
   }
 
 }

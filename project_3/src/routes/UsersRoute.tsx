@@ -29,8 +29,10 @@ function UsersRoute() {
         <h2>User Profile</h2>
         <UsersList/>
         {/* <UsersList user={user!}/> */}
-        <button className="UserList__backButton">Back</button>
-        <button className="UserList__editButton" >Edit Profile</button>
+        <div className="UserProfile__button">
+          <button className="UserList__backButton">Back</button>
+          <button className="UserList__editButton" >Edit Profile</button>
+        </div>
       </div>
     );
   }
