@@ -5,6 +5,7 @@ import User from "../models/User";
 import { fetchUser } from "../services/UserService";
 import UsersList from "../components/UsersList";
 import { useParams } from "react-router";
+import  '../App.css';
 //import { useNavigate } from "react-router-dom";
 
 function UsersRoute() {
