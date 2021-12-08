@@ -1,4 +1,5 @@
 nav {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -20,9 +21,14 @@ nav {
     color: white;
   }
   
-  a:link {
+#NavPets, #NavProfile{
     font-weight: bold;
     margin: 20px 20px;
     text-decoration: none;
     color: black;
   }
+
+#NavPets :hover {
+  color: #8A2387;
+}
+

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; import DesktopNav from "./DesktopNav";
+import '../styles/Homepage.css';
 {/*added Link*/ }
 
 function Homepage() {
@@ -20,7 +21,8 @@ function Homepage() {
                     </div>
                 </div>
                 <div className="HomeImg">
-                    <img src="/images/Pics/DesktopImage.png" />
+                    <img id="DesktopImg" src="/images/Pics/DesktopImage.png" />
+                    <img id="MobileImg" src="/images/Pics/MobileHomeImage.png"/>
                 </div>
             </div>
         </div>
