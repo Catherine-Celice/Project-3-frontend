@@ -11,11 +11,15 @@
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
+  width: 90%;
   justify-content: center;
   align-items: center;
 }
 
 .UserProfileRoute>h2 {
+  font-size: 2em;
+  width: 90%;
+  text-align: center;
   margin-bottom: 120px;
 }
 
@@ -29,23 +33,30 @@
   border-radius: 10px;
 }
 
-#root>a {
-  font-size: .8em;
-  display: block;
-  width: 100%;
-  background-color: rgb(143, 143, 143);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
 #dog {
   position: absolute;
-  bottom: 30px;
+  width: 100%;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgb(143, 143, 143);
+  bottom: 20px;
+  font-size: .6em;
+  color: blue;
 }
 
 #cat {
   position: absolute;
+  width: 100%;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgb(143, 143, 143);
   bottom: 0px;
+  font-size: .6em;
+  color: blue;
 }
 
 /* Design System Standards */
@@ -157,7 +168,7 @@ body {
   height: 90vh;
 }
 
-.UserProfile {
+/* .UserProfile {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -178,9 +189,9 @@ body {
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 0px;
-}
+} */
 
-.UserList__first {
+/* .UserList__first {
   border: 1px solid lightslategray;
   border-radius: 5px;
   padding: 2px;
@@ -192,7 +203,7 @@ body {
   border-radius: 5px;
   padding: 2px;
   min-width: 80%;
-}
+} */
 
   /* Tablet view */
 @media (max-width: 1024px) and (min-width: 641px) {
@@ -233,6 +244,48 @@ body {
   h3 {
     font-weight: lighter;
     font-size: 18px;
+  }
+
+  .UserProfileRoute>h2 {
+    font-size: 1.6em;
+    margin-top: 15px;
+    margin-bottom: 120px;
+  }
+
+  .UserProfileRoute>button {
+    background-color: #8A2387;
+    color: white;
+    width: 90px;
+    height: 35px;
+    margin: 10px;
+    padding: 2px;
+    border-radius: 10px;
+  }
+  
+  #dog {
+    position: absolute;
+    width: 100%;
+    display: block;
+    padding: 6px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(143, 143, 143);
+    bottom: 15px;
+    font-size: .5em;
+    color: blue;
+  }
+  
+  #cat {
+    position: absolute;
+    width: 100%;
+    display: block;
+    padding: 6px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(143, 143, 143);
+    bottom: 0px;
+    font-size: .5em;
+    color: blue;
   }
 
 }

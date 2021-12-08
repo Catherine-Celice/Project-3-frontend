@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 import User from "../models/User";
-import '../styles/UserProfile.css';
 import '../styles/UserList.css';
 
 //interface Props {

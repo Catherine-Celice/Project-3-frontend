@@ -18,7 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    width: 90%;
+    align-items: left;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
 }
@@ -28,11 +29,11 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 300px;
-    align-items: center;
+    align-items: left;
     margin: 0px;
 }
 
-p {
+.Profile>p {
     border: 1px solid lightslategray;
     border-radius: 5px;
     padding: 5px;
@@ -112,12 +113,13 @@ p {
     left: 70px;
 }
 
+
 @media (max-width: 1024px) and (min-width: 641px) {
     /* Tablet view */
 
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 640px) and (min-width: 360px) {
     /* Desktop view */
     .UserProfile {
         display: flex;
@@ -129,52 +131,13 @@ p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 500px;
+        width: 300px;
         align-items: center;
         margin: 0px;
     }
-    
-    .UserList__first {
-        position: absolute;
-        top: 170px;
-    }
 
-    .UserList__last {
-        position: absolute;
-        top: 211px;
-    }
-
-    .UserList__email {
-        position: absolute;
-        top: 250px;
-
-    }
-
-    .UserList__phone {
-        position: absolute;
-        top: 289px;
-
-    }
-
-    .UserList__password {
-        position: absolute;
-        top: 329px;
-    }
-
-    .UserList__zip {
-        position: absolute;
-        top: 367px;
-
-    }
-
-    .UserList__aboutMe {
-        position: absolute;
-        top: 407px;
-    }
-
-    .UserList__prefrences {
-        position: absolute;
-        top: 477px;
+    .about {
+        height: 50px;
     }
     
 }
