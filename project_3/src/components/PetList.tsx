@@ -56,7 +56,7 @@ function PetList() {
       //   </>
       // );
       return (
-        <div>
+        <div className="PetList">
           <h1>View Available Pets</h1>
           <div className='cardContainer'>
             {pets.map((pet) =>
