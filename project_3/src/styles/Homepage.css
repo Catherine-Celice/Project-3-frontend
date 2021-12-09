@@ -1,10 +1,16 @@
+body {
+  width: 100%;
+  height: 90vh;
+}
+
 .Homepage {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   
   .HeroContent {
-    margin: 100px 0px;
+    margin: 100px 20px;
     max-width: 500px;
     min-width: 300px;
   }
@@ -13,6 +19,14 @@
     max-width: 50%;
   }
 
+  #DesktopImg {
+    max-height: 90vh;
+  }
+
+  #MobileImg {
+    /* height: 40vh; */
+    display: none;
+  }
 
   .homebtns {
     justify-content: space-around;
@@ -21,3 +35,41 @@
   .signin {
     display: flex;
   }
+
+  /* Tablet and Below */
+@media all and (max-width: 1024px) {
+  h2 {
+    margin: 0;
+    color: #F27121;
+    font-size: 36px;
+  }
+
+  h3 {
+    font-weight: lighter;
+    font-size: 22px;
+  } 
+
+  .Homepage {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+ 
+  .HeroContent {
+    justify-content: center;
+  }
+
+  .HomeImg {
+    max-width: 90%;
+    justify-content: center;
+  }
+
+  #MobileImg {
+    display: block;
+    height: 40vh;
+  }
+
+  #DesktopImg {
+    display: none;
+  }
+}

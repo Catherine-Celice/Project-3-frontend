@@ -46,11 +46,11 @@ import '../styles/UserList.css';
           <span className="UserList__password">{users[0].password1}</span>
         </p>
         <p>
-          <label className="zip">Zip code: </label>
+          <label className="zip">Zip Code: </label>
           <span className="UserList__zip">{users[0].zip}</span>
         </p>
         <p className="about">
-          <label className="aboutMe">About me: </label>
+          <label className="aboutMe">About Me: </label>
           <span className="UserList__aboutme">{users[0].aboutme}</span>
         </p>
         <p>
