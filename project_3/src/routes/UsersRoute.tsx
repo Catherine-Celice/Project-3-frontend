@@ -20,7 +20,7 @@ function UsersRoute() {
         fetchUser(email, password1).then(res => setUser(res));
       }
       else if(!email || ! password1) {
-        alert('No user found');
+        alert('No user found. Would you like to create a profile?');
       }
     }, [email, password1]);
   
