@@ -56,21 +56,31 @@ function PetList() {
       //   </>
       // );
       return (
-        <div className="PetList">
-          <h1>View Available Pets</h1>
+        <div>
+          <br /> <br />
+          <h1>Discover</h1>
           <div className='cardContainer'>
             {pets.map((pet) =>
               <TinderCard className='swipe' key={pet.id} onSwipe={(dir) => swiped(dir, String(pet.id))} onCardLeftScreen={() => outOfFrame(pet.name)}>
-                              { pet.photos!?.length > 0 ? <img style={{width:"150px", height:"150px"}} className='petPic'src={pet.photos[0].large} alt="pet" onClick={() => handleRoute(String(pet.id))}/> 
-                :  <img style={{width:"150px", height:"150px"}} className='petPic'src="/images/Avatars/dog1_avatar.png" alt="pet" onClick={() => handleRoute(String(pet.id))}/> 
-              }
-                <p className='petName'>{pet.name}, {pet.age}</p>
-                <p className='petBreed'>{pet.breeds.primary}</p>
-                <p className='petLocation'>{pet.contact?.address.postcode}</p>
+                { pet.photos!?.length > 0
+                  ? <div style={{ backgroundImage: 'url(' + pet.photos[0].large + ')'}} className='card'>
+                    <div className="cardContent">
+                          <p className='petName'>{pet.name}, {pet.age}</p>
+                          <p className='petBreed'>{pet.breeds.primary}</p>
+                          {/* <p className='petLocation'>{pet.contact?.address.postcode}</p> */}
+                    </div>
+                          </div>
+                  : <div style={{ backgroundImage: 'url(/images/Avatars/dog1_avatar.png)' }} className='card'>
+                    <div className="cardContent">
+                          <p className='petName'>{pet.name}, {pet.age}</p>
+                          <p className='petBreed'>{pet.breeds.primary}</p>
+                          {/* <p className='petLocation'>{pet.contact?.address.postcode}</p> */}
+                    </div>
+                    </div>
+                }
               </TinderCard>
             )}
           </div>
-          {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
         </div>
       )
   }
