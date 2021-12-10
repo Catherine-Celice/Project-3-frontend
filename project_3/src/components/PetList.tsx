@@ -63,14 +63,14 @@ function PetList() {
             {pets.map((pet) =>
               <TinderCard className='swipe' key={pet.id} onSwipe={(dir) => swiped(dir, String(pet.id))} onCardLeftScreen={() => outOfFrame(pet.name)}>
                 { pet.photos!?.length > 0
-                  ? <div style={{ backgroundImage: 'url(' + pet.photos[0].large + ')'}} className='card'>
+                  ? <div style={{ backgroundImage: 'url(' + pet.photos[0].large + ')'}} className='card' onClick={() => handleRoute(String(pet.id))}>
                     <div className="cardContent">
                           <p className='petName'>{pet.name}, {pet.age}</p>
                           <p className='petBreed'>{pet.breeds.primary}</p>
                           {/* <p className='petLocation'>{pet.contact?.address.postcode}</p> */}
                     </div>
                           </div>
-                  : <div style={{ backgroundImage: 'url(/images/Avatars/dog1_avatar.png)' }} className='card'>
+                  : <div style={{ backgroundImage: 'url(/images/Avatars/dog1_avatar.png)' }} className='card' onClick={() => handleRoute(String(pet.id))}>
                     <div className="cardContent">
                           <p className='petName'>{pet.name}, {pet.age}</p>
                           <p className='petBreed'>{pet.breeds.primary}</p>
