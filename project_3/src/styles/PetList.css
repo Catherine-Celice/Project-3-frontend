@@ -1,0 +1,93 @@
+/* Added for card styling*/
+.Discover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Disch1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.swipe {
+    position: absolute;
+  }
+  
+  .cardContainer {
+    width: 90vw;
+    max-width: 260px;
+    height: 300px;
+    display: flex;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    width: 80vw;
+    max-width: 260px;
+    height: 450px;
+    box-shadow: 0px 0px 2px 0px #8A2387;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    display: row;
+    justify-content: left;
+  }
+
+  /* .card > #cardimg {
+      background-size: contain;
+  } */
+  
+  .cardContent {
+    position: relative;
+    background-color: black;
+    opacity: 80%;
+    width: 100%;
+    height: 23%;
+    align-self: flex-end;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .petName {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 20px 10px 0px 10px;
+  }
+
+  .petBreed {
+      color: white;
+      font-size: 0.9em;
+      margin: 10px;
+  }
+
+  /* .noyes {
+      display: flex;
+      align-items: center;
+      margin: 172px 0px 50px 0px;
+  } */
+
+  
+  /* .swipe:last-of-type {
+  
+  } */
+  
+  .card h3 {
+    position: absolute;
+    /* bottom: 0; */
+    margin: 10px;
+    color: #fff;
+  }
+  
+  .infoText {
+    width: 100%;
+    height: 28px;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    animation-name: popup;
+    animation-duration: 800ms;
+  }

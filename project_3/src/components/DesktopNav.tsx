@@ -8,9 +8,7 @@ function DesktopNav(){
         <div>
             <nav>
                 <div className="NavBar">
-
-                    <h1><img className="NavIcon" src="/images/Avatars/pawfectpals.png" width="60"/>Pawfect Pals</h1>
-
+                    <h1 className="NavPP"><img className="NavIcon" src="/images/Avatars/pawfectpals.png" width="60"/>PawfectPals</h1>
                 <div className="NavBarLinks">
                     <a><Link to="/viewpets" id="NavPets">View Available Pets</Link></a>
                     <a><Link to="/myprofile" id="NavProfile">My Profile</Link></a>
