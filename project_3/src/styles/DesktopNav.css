@@ -1,12 +1,16 @@
 nav {
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
   }
   
   .NavBar {
     padding: 10px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .NavPP {
+    color: #F27121;
+    justify-content: left;
   }
   
   .NavBarLinks {
