@@ -5,6 +5,7 @@ import { getAllPets } from '../services/PetService'
 import TinderCard from 'react-tinder-card'
 import React from "react";
 import '../styles/PetList.css';
+import DesktopNav from "./DesktopNav";
 
 
 function PetList() {
@@ -57,8 +58,9 @@ function PetList() {
   //   </>
   // );
   return (
+    <>
+    <DesktopNav></DesktopNav>
     <div>
-      <br /> <br />
       <div className="Discover">
       <h1 className="Disch1">Discover</h1>
         <div className='cardContainer'>
@@ -89,6 +91,7 @@ function PetList() {
         </div> */}
       </div>
     </div>
+    </>
   )
 }
 
