@@ -34,6 +34,10 @@
 }
 
 /* Design System Standards */
+a:link {
+  text-decoration: none;
+}
+
 h2 {
   margin: 0px;
   color: #F27121;
@@ -84,35 +88,7 @@ button {
   height: 55px;
 }
 
-/* Navigation CSS */
-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-}
-
-.NavBar {
-  padding: 10px 40px 40px 40px;
-}
-
-.NavBarLinks {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  margin-top: -40px;
-}
-
-.navSignUp {
-  background-color: #8A2387;
-  color: white;
-}
-
-a:link {
-  font-weight: bold;
-  margin: 20px 20px;
-  text-decoration: none;
-  color: black;
-}
+/* Heidi CSS */
 
 #acclaim {
   display: flex;
@@ -143,7 +119,7 @@ a:link {
 
 
   /* Homepage */
-  .Homepage {
+  /* .Homepage {
     display: flex;
     flex-wrap: wrap;
   }
@@ -164,7 +140,7 @@ a:link {
 
   .signin {
     display: flex;
-  }
+  } */
 
 /* Tablet view */
   @media (max-width: 1024px) and (min-width: 641px) {

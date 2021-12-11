@@ -3,36 +3,35 @@ nav {
   }
   
   .NavBar {
-    padding: 10px 40px 40px 40px;
-    display: flex;
-    flex-direction: column;
+    padding: 0px 40px 40px 40px;
+    align-items: center;
   }
 
   .NavPP {
     color: #F27121;
-    justify-content: left;
   }
   
   .NavBarLinks {
     display: flex;
+    flex-direction: row;
     justify-content: right;
-    align-items: center;
     margin-top: -40px;
   }
   
   .navSignUp {
     background-color: #8A2387;
     color: white;
+    margin-top: -15px;
   }
   
 #NavPets, #NavProfile{
     font-weight: bold;
     margin: 20px 20px;
     text-decoration: none;
-    color: black;
+    color: #8A2387;
   }
 
-#NavPets :hover {
-  color: #8A2387;
+#NavPets, #NavProfile :hover {
+  color: #F27121;
 }
 

@@ -17,14 +17,15 @@ body {
 
   .HomeImg {
     max-width: 50%;
+    min-width: 30%;
+    margin: 0px 0px 0px -100px;
   }
 
   #DesktopImg {
-    max-height: 90vh;
+    max-height: 80vh;
   }
 
   #MobileImg {
-    /* height: 40vh; */
     display: none;
   }
 
@@ -36,40 +37,95 @@ body {
     display: flex;
   }
 
-  /* Tablet and Below */
-@media all and (max-width: 1024px) {
-  h2 {
-    margin: 0;
-    color: #F27121;
-    font-size: 36px;
+  /* Tablet view */
+  @media (max-width: 1024px) and (min-width: 641px) {
+    h2 {
+      margin: 0px;
+      color: #F27121;
+      font-size: 48px;
+    }
+
+    h3 {
+      font-weight: lighter;
+      font-size: 22px;
+    }
+    
+    .Homepage {
+      display: flex;
+      flex-direction: column-reverse;
+      align-content: center;
+    }
+
+    .HeroContent {
+      margin: 10px 20px;
+      max-width: 500px;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .signin {
+      text-align: center;
+    }
+
+    .HomeImg {
+      display: flex;
+      margin: auto;
+    }
+
+    #MobileImg {
+      display: block;
+      height: 50vh;
+    }
+  
+    #DesktopImg {
+      display: none;
+    }
+
   }
 
-  h3 {
-    font-weight: lighter;
-    font-size: 22px;
-  } 
-
+  /* Mobile view */
+@media (max-width: 640px) and (min-width: 360px) {
   .Homepage {
     display: flex;
     flex-direction: column-reverse;
     align-content: center;
   }
- 
+
   .HeroContent {
+    margin: 10px 20px;
     justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0px;
+    color: #F27121;
+    font-size: 32px;
+  }
+
+  h3 {
+    font-weight: lighter;
+    font-size: 18px;
   }
 
   .HomeImg {
     max-width: 90%;
+    margin: auto;
     justify-content: center;
   }
 
   #MobileImg {
     display: block;
-    height: 40vh;
+    height: 50vh;
   }
 
   #DesktopImg {
     display: none;
+  }
+ 
+  #orangebtn, #purplebtn {
+    width: 70vw;
+    font-size: 16px;
+    margin: 10px 0px;
   }
 }
