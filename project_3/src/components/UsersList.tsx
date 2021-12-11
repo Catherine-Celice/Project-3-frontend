@@ -4,6 +4,7 @@
 import { useState } from "react";
 import User from "../models/User";
 import '../styles/UserList.css';
+import DesktopNav from "./DesktopNav";
 
 //interface Props {
 //  user: User;
@@ -20,6 +21,7 @@ import '../styles/UserList.css';
     ]);
 
   return (
+    <>
     <div className="UserProfile">
       <div className="Profile">
          <span>
@@ -59,6 +61,7 @@ import '../styles/UserList.css';
         </p>
       </div>
     </div>
+    </>
   );
 }
 
