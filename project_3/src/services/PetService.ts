@@ -5,6 +5,8 @@ let token:string;
 let expires: number;
 let authUrl = "https://api.petfinder.com/v2/oauth2/token";
 const baseUrl = "https://api.petfinder.com/v2/animals";
+const endParams = '?limit=75&location=48219&?sort=distance';
+// https://api.petfinder.com/v2/animals?limit=75&location=48219&sort=distance
 
 const getToken = () => {
   return empty(token) || new Date().getTime() >= expires
@@ -29,7 +31,7 @@ const getToken = () => {
 export function getAllPets(): Promise<Pet[]> {
   return getToken().then((token) => {
     return axios
-      .get(`${baseUrl}`, {
+      .get(`${baseUrl}/${endParams}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
