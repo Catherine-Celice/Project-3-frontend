@@ -29,8 +29,12 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 300px;
-    align-items: left;
+    align-items: center;
     margin: 0px;
+    padding: 10px;
+    border:1px solid #8A2387;
+    box-shadow: 0px 5px 5px #5f5f5f, 5px 5px 10px #5f5f5f;
+    border-radius: 8px;
 }
 
 .Profile>p {
@@ -57,32 +61,32 @@ body {
 
 .Profile>p>.first {
     position: absolute;
-    top: 159px;
-    left: 90px;
+    top: 169px;
+    left: 110px;
 }
 
 .Profile>p>.last {
     position:absolute;
-    top:199px;
-    left: 90px;
+    top:209px;
+    left: 110px;
 }
 
 .Profile>p>.email {
     position: absolute;
-    top: 238px;
-    left: 90px;
+    top: 249px;
+    left: 110px;
 }
 
 .Profile>p>.phone {
     position:absolute;
-    top: 276px;
-    left: 90px;
+    top: 286px;
+    left: 110px;
 }
 
 .Profile>p>.password {
     position:absolute;
-    top: 315px;
-    left: 90px;
+    top: 326px;
+    left: 110px;
 }
 
 .UserList__password {
@@ -93,14 +97,14 @@ body {
 
 .Profile>p>.zip {
     position: absolute;
-    top: 354px;
-    left: 90px;
+    top: 364px;
+    left: 110px;
 }
 
 .Profile>p>.aboutMe {
     position: absolute;
-    top: 394px;
-    left: 90px;
+    top: 404px;
+    left: 110px;
 }
 
 .about {
@@ -109,8 +113,8 @@ body {
 
 .Profile>p>.prefrences {
     position: absolute;
-    top: 471px;
-    left: 90px;
+    top: 442px;
+    left: 110px;
 }
 
 

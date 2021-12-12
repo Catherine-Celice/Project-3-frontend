@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import DesktopNav from './DesktopNav';
 import ToggleSwitch from "./ToggleSwitch";
-
+import '../styles/Preferences.css';
 
 
 function PreferencesForm() {
     let [dog, setDog] = useState(false);
     let [cat, setCat] = useState(false);
-    let [both, setBoth] = useState(false);
     let [male, setMale] = useState(false);
     let [female, setFemale] = useState(false);
     let [pupkit, setPupkit] = useState(false);
@@ -61,8 +60,7 @@ function PreferencesForm() {
     };
 
     return (
-        <div>
-            <DesktopNav />
+        <div className='Preferences__body'>
             <div className='Preferences'>
                 <div className='Preferences__header'>
                     <h2 className='Preferences__title'>Your Pet Preferences</h2>
@@ -71,31 +69,58 @@ function PreferencesForm() {
                     </p>
                 </div>
                 <div className='Preferences__matches'>
-                    <ToggleSwitch id="dog" checked={dog} onChange={onDogChange} />
-                    <label className="toggle-switch-label">Dog</label>
-                    <ToggleSwitch id="cat" checked={cat} onChange={onCatChange} />
-                    <label htmlFor="cat">Cat</label>
-                    <ToggleSwitch id="male" checked={male} onChange={onMaleChange} />
-                    <label htmlFor="male">Male</label>
-                    <ToggleSwitch id="female" checked={female} onChange={onFemaleChange} />
-                    <label htmlFor="female">Female</label>
-                    <ToggleSwitch id="pupkit" checked={pupkit} onChange={onPupKitChange} />
-                    <label htmlFor="pupkit">Puppy/Kitten</label>
-                    <ToggleSwitch id="young" checked={young} onChange={onYoungChange} />
-                    <label htmlFor="young">Young</label>
-                    <ToggleSwitch id="adult" checked={adult} onChange={onAdultChange} />
-                    <label htmlFor="adult">Adult</label>
-                    <ToggleSwitch id="senior" checked={senior} onChange={onSeniorChange} />
-                    <ToggleSwitch id="kids" checked={kids} onChange={onKidsChange} />
-                    <label htmlFor="kids">Kid Friendly</label>
-                    <ToggleSwitch id="pet" checked={pet} onChange={onPetChange} />
-                    <label htmlFor="pet">Pet Friendly</label>
-                    <ToggleSwitch id="small" checked={small} onChange={onSmallChange} />
-                    <label htmlFor="small">Small Dog</label>
-                    <ToggleSwitch id="med" checked={med} onChange={onMedChange} />
-                    <label htmlFor="med">Medium Dog</label>
-                    <ToggleSwitch id="large" checked={large} onChange={onLargeChange} />
-                    <label htmlFor="large">Large Dog</label>
+                    <p>
+                        <ToggleSwitch id="dog" checked={dog} onChange={onDogChange} />
+                        <label htmlFor="dog">Dog</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="cat" checked={cat} onChange={onCatChange} />
+                        <label htmlFor="cat">Cat</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="male" checked={male} onChange={onMaleChange} />
+                        <label htmlFor="male">Male</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="female" checked={female} onChange={onFemaleChange} />
+                        <label htmlFor="female">Female</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="pupkit" checked={pupkit} onChange={onPupKitChange} />
+                        <label htmlFor="pupkit">Puppy/Kitten</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="young" checked={young} onChange={onYoungChange} />
+                        <label htmlFor="young">Young</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="adult" checked={adult} onChange={onAdultChange} />
+                        <label htmlFor="adult">Adult</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="senior" checked={senior} onChange={onSeniorChange} />
+                        <label htmlFor="senior">Senior</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="kids" checked={kids} onChange={onKidsChange} />
+                        <label htmlFor="kids">Kid Friendly</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="pet" checked={pet} onChange={onPetChange} />
+                        <label htmlFor="pet">Pet Friendly</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="small" checked={small} onChange={onSmallChange} />
+                        <label htmlFor="small">Small Dog</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="med" checked={med} onChange={onMedChange} />
+                        <label htmlFor="med">Medium Dog</label>
+                    </p>
+                    <p>
+                        <ToggleSwitch id="large" checked={large} onChange={onLargeChange} />
+                        <label htmlFor="large">Large Dog</label>
+                    </p>
                 </div>
             </div>
         </div>

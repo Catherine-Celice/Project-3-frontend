@@ -1,9 +1,9 @@
 // Colors
 $label-colour: #bbb;
 $disabled-colour: #ddd;
-$toggle-colour: #2F855A;
+$toggle-colour: #F27121;
 $white: #fff;
-$focus-color: #ff0;
+$focus-color: #8A2387;
 
 .toggle-switch {
   position: relative;
@@ -28,7 +28,7 @@ $focus-color: #ff0;
     &:focus {
       outline: none;
       > span {
-        box-shadow: 0 0 2px 5px red;
+        box-shadow: 0 0 2px 5px $focus-color;
       }
     }
     > span:focus {

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import './styles/ToggleSwitch.scss'
+import '../styles/ToggleSwitch.scss'
 
 // Toggle Switch Component
 // Note: id, checked and onChange are required for the ToggleSwitch component to work.
@@ -8,20 +8,20 @@ import './styles/ToggleSwitch.scss'
 // Usage: <ToggleSwitch id="id" checked={value} onChange={checked => setValue(checked)}} />
 
 const ToggleSwitch = ({
-    id, 
-    name, 
-    checked, 
-    onChange, 
-    optionLabels, 
-    small, 
+    id,
+    name,
+    checked,
+    onChange,
+    optionLabels,
+    small,
     disabled
 }) => {
-        function handleKeyPress(e) {
-        if (e.keyCode !== 32) return;
-      
-        e.preventDefault();
-        onChange(!checked)
-      }  
+    function handleKeyPress(e: React.KeyboardEvent<HTMLLabelElement>) {
+      if (e.keyCode !== 32) return;
+  
+      e.preventDefault();
+      onChange(!checked);
+    }
     
     return(
         <div className={"toggle-switch" + (small ? " small-switch" : "")}>
@@ -38,7 +38,7 @@ const ToggleSwitch = ({
                 <label 
                     className='toggle-switch-label' 
                     tabIndex={disabled ? -1 : 1}
-                    onKeyDown={(e) => handleKeyPress(e)}
+                    onKeyDown={(e) => {handleKeyPress(e)}}
                     htmlFor={id}
                 >
                     <span className={
