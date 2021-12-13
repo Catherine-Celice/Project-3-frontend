@@ -35,3 +35,39 @@ nav {
   color: #F27121;
 }
 
+ /* Mobile view */
+ @media (max-width: 760px){
+  .NavBar {
+    padding: 0px 40px 40px 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .NavBarLinks {
+    margin: 16px 0px 0px 0px;
+  }
+ }
+
+ @media (max-width: 514px) and (min-width: 320px) {
+  .NavBar {
+    padding: 0px 40px 20px 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .NavBarLinks > a {
+    font-size: 12px;
+    display: flex;
+  }
+
+  #NavPets, #NavProfile {
+    text-align: center;
+  }
+
+  .navSignUp {
+    font-size: 12px;
+    margin: 0px 0px 0px 10px;
+  }
+}
