@@ -39,8 +39,6 @@ function CreateYourUserProfile() {
   //useEffect(() => setTo(initialTo), [initialTo]);
 
 
-
-
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     // TO DO: we need to write an else part -- in case password1 and password2 don't match
@@ -61,12 +59,13 @@ function CreateYourUserProfile() {
       setEmail("");
       setPhone("");
       setPassword1("");
+      setPassword2("");
       setZip("");
       setAboutMe("");
 
 
     } else {
-      // TO DO -- what will we do if the passwords enteed don't match each other
+      // TO DO -- what will we do if the passwords entered don't match each other
     }
   } // end of handleSubmit
 

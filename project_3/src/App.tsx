@@ -8,6 +8,7 @@ import CreateYourUserProfile from './components/CreateYourUserProfile';
 import UsersList from './components/UsersList';
 import DesktopNav from './components/DesktopNav';
 import PetProfile from './components/PetProfile';
+import LoginUser from './components/LoginUser';
 
 
 // https://blog.logrocket.com/react-router-v6/
@@ -26,7 +27,7 @@ function App() {
         </Route>
         <Route path="/myprofile" element={<UsersRoute/>}/>
         <Route path="/signup" element={<CreateYourUserProfile/>}/>
-        
+        <Route path="/login" element={<LoginUser/>}/>
       </Routes>
     </Router>
 
