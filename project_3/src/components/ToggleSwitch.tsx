@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import '../styles/ToggleSwitch.scss'
+import '../styles/ToggleSwitch.scss';
+import '../styles/ToggleSwitch.css';
 
 // Toggle Switch Component
 // Note: id, checked and onChange are required for the ToggleSwitch component to work.
