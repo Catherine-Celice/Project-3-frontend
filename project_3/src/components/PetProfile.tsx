@@ -35,9 +35,20 @@ function PetProfile() {
             <p className="PetProfileBreed">{pet.breeds.primary} - {pet.type}</p>
             <h4>Location</h4>
             <p>{pet.contact?.address.city}, {pet.contact?.address.state}</p>
-            <h4>About Me</h4>
+            <h4>About {pet.name}</h4>
             <p className="PetDescription">{pet.description}</p>
-            <p>{pet.attributes.special_needs}</p>
+            <div className="tags">
+            <p className="tag">{pet.gender}</p>
+            <p className="tag">{pet.size}</p>
+            <p className="tag">{pet.coat}</p>
+            {/* <p className="tag">{pet.attributes.spayed_neutered}</p>
+            <p className="tag">{pet.attributes.house_trained}</p>
+            <p className="tag">{pet.attributes.declawed}</p>
+            <p className="tag">{pet.attributes.special_needs}</p>
+            <p className="tag">{pet.environment?.children}</p>
+            <p className="tag">{pet.environment?.dogs}</p>
+            <p className="tag">{pet.environment?.cats}</p> */}
+            </div>
             <button id="orangebtn"><a href={pet.url} className="buttons">Adopt Me</a></button>
           </div>
         </div>
