@@ -64,6 +64,7 @@ body {
     }
 
     .signin {
+      justify-content: center;
       text-align: center;
     }
 
@@ -80,23 +81,10 @@ body {
     #DesktopImg {
       display: none;
     }
-
   }
 
   /* Mobile view */
-@media (max-width: 640px) and (min-width: 360px) {
-  .Homepage {
-    display: flex;
-    flex-direction: column-reverse;
-    align-content: center;
-  }
-
-  .HeroContent {
-    margin: 10px 20px;
-    justify-content: center;
-    text-align: center;
-  }
-
+@media (max-width: 640px) and (min-width: 320px) {
   h2 {
     margin: 0px;
     color: #F27121;
@@ -108,15 +96,39 @@ body {
     font-size: 18px;
   }
 
+  .Homepage {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+
+  .HeroContent {
+    margin: 10px 20px;
+    max-width: 350px;
+    justify-content: center;
+    text-align: center;
+  }
+
   .HomeImg {
     max-width: 90%;
     margin: auto;
     justify-content: center;
   }
 
+  .homebtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signin {
+    justify-content: center;
+    text-align: center;
+  }
+
   #MobileImg {
     display: block;
-    height: 50vh;
+    height: 45vh;
   }
 
   #DesktopImg {
