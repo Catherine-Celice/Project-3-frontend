@@ -13,12 +13,12 @@ import DesktopNav from "./DesktopNav";
 //function UsersList({user}: Props) {
   function UsersList() {
       
-    const [users, setUsers] = useState<User[]>([
-      {image: "cat1_avatar", firstname: "Hanna", lastname: "Svendor", email: "Hanna123@gmail.com", phone: "123-456-1234", password1: "newpassword"},
-      {image: "dog1_avatar", firstname: "Salena", lastname: "Galloway", email: "Salena123@gmail.com", phone: "987-654-1234", password1: "password1"},
+     const [users, setUsers] = useState<User[]>([
+    //   {image: "cat1_avatar", firstname: "Hanna", lastname: "Svendor", email: "Hanna123@gmail.com", phone: "123-456-1234", password1: "newpassword"},
+    //   {image: "dog1_avatar", firstname: "Salena", lastname: "Galloway", email: "Salena123@gmail.com", phone: "987-654-1234", password1: "password1"},
       {image: "cat2_avatar", firstname: "Heidi", lastname: "Youmans", email: "Heidi123@gmail.com", phone: "345-789-1234", password1: "i8T00MUCH"},
-      {image: "dog2_avatar", firstname: "Catherine", lastname: "Celice", email: "Catherine123@gmail.com", phone: "875-423-1234", password1: "TooMuchProgramming"},
-    ]);
+    //   {image: "dog2_avatar", firstname: "Catherine", lastname: "Celice", email: "Catherine123@gmail.com", phone: "875-423-1234", password1: "TooMuchProgramming"},
+     ]);
 
   return (
     <>

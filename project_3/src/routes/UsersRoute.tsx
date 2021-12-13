@@ -6,6 +6,8 @@ import { fetchUser } from "../services/UserService";
 import UsersList from "../components/UsersList";
 import { useParams } from "react-router";
 import  '../App.css';
+import { Link } from "react-router-dom";
+import PreferencesForm from "../components/Preferences";
 //import { useNavigate } from "react-router-dom";
 
 function UsersRoute() {
@@ -28,10 +30,11 @@ function UsersRoute() {
       <div className="UserProfileRoute">
         <h2>User Profile</h2>
         <UsersList/>
+        <PreferencesForm/>
         {/* <UsersList user={user!}/> */}
         <div className="UserProfile__button">
-          <button className="UserList__backButton">Back</button>
-          <button className="UserList__editButton" >Edit Profile</button>
+          <button className="UserList__backButton"><Link to="/" className="buttons">Home</Link></button>
+          <button className="UserList__editButton" ><Link to="/" className="buttons">Edit</Link></button>
         </div>
       </div>
     );
