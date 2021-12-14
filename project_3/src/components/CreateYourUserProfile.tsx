@@ -48,7 +48,7 @@ function CreateYourUserProfile() {
 
       const newUser: User = {
         firstname: firstname, lastname: lastname, email: email, phone: phone,
-        password1: password1, zip: zip, aboutme: aboutMe
+        password1: password1, zip: zip, aboutme: aboutMe, isLoggedIn: true, petList: []
       };
 
 
