@@ -11,7 +11,7 @@ body {
     align-items: left;
     margin: 0px;
     width: 100%;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 .UserProfile {
@@ -125,10 +125,12 @@ body {
 
 @media (max-width: 640px) and (min-width: 360px) {
     /* Mobile view */
+    
     .UserProfile {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: center;
         margin-bottom: 100px;
     }
     .Profile {
@@ -144,7 +146,7 @@ body {
         max-width: 100px;
         position: absolute;
         top: 55px;
-        left: 70px;
+        left: 60px;
     }
     
     .Profile>p>label {
@@ -154,44 +156,44 @@ body {
     
     .Profile>p>.first {
         position: absolute;
-        top: 168px;
-        left: 70px;
+        top: 178px;
+        left: 60px;
     }
     
     .Profile>p>.last {
         position:absolute;
-        top:207px;
-        left: 70px;
+        top:217px;
+        left: 60px;
     }
     
     .Profile>p>.email {
         position: absolute;
-        top: 246px;
-        left: 70px;
+        top: 256px;
+        left: 60px;
     }
     
     .Profile>p>.phone {
         position:absolute;
-        top: 284px;
-        left: 70px;
+        top: 295px;
+        left: 60px;
     }
     
     .Profile>p>.password {
         position:absolute;
-        top: 324px;
-        left: 70px;
+        top: 334px;
+        left: 60px;
     }
     
     .Profile>p>.zip {
         position: absolute;
-        top: 362px;
-        left: 70px;
+        top: 372px;
+        left: 60px;
     }
     
     .Profile>p>.aboutMe {
         position: absolute;
-        top: 402px;
-        left: 70px;
+        top: 412px;
+        left: 60px;
     }
     
     .about {
@@ -200,7 +202,7 @@ body {
     
     .Profile>p>.prefrences {
         position: absolute;
-        top: 471px;
-        left: 70px;
+        top: 450px;
+        left: 60px;
     }
 }

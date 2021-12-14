@@ -56,3 +56,54 @@
     background-color: white;
     border-radius: 8px;
 }
+
+@media (max-width: 1024px) and (min-width: 641px) {
+    /* Tablet view */
+
+}
+
+@media (max-width: 640px) and (min-width: 360px) {
+    /* Mobile view */
+
+    .Preferences {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Preferences__body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: fixed;
+        top: 75%;
+        left: 0;
+        min-width: 500px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        top: 0;
+        bottom: 0; 
+    }
+
+    .Preferences__matches {
+        font-size: .8em;
+        width: 95%;
+    }
+
+    .Preferences__matches>p {
+        margin: 2px;
+        padding: 1px;
+    }
+
+    .Preferences__header {
+        font-size: .8em;
+    }
+
+    .Preferences__desc {
+        width:80%;
+        font-size: .9em;
+    }
+    
+}
