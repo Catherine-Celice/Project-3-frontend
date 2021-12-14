@@ -3,11 +3,20 @@
     flex-direction: column;
     align-items: center;
     width: 90vw;
+    position: relative;
 }
 
 .PetProfileImages {
     display: flex;
     justify-content: center;
+    margin-bottom: -50px;
+}
+
+.PetProfileContent {
+    background-color: #fef0e9;
+    border-radius: 15px;
+    padding: 40px 20px;
+    margin: auto;
 }
 
 .PetProfileName {
@@ -20,13 +29,55 @@
     margin: -10px 0px;
 }
 
+.BackBtn {
+    background-color: #8A2387;
+    color: white;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+
+.noyes {
+    width: 300px;
+    margin: auto;
+    margin-bottom: -60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .tag {
     font-weight: bold;
+    font-size: 13px;
     display: inline-block;
     border-color: #F27120;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
-    padding: 5px;
-    margin: 10px 8px 10px 0px;
+    padding: 8px 24px;
+    margin: 10px 8px 40px 0px;
+}
+
+/* Mobile View */
+@media (max-width: 640px) and (min-width: 360px) {
+    .PetProfileContent {
+        width: 75%;
+        margin: auto;
+    }
+
+    .noyes {
+        width: 220px;
+    }
+
+    .dislikeIcon {
+        width: 100px;
+    }
+
+    .tags {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .tag { 
+        margin: 8px 8px 0px 0px;
+    }
 }
