@@ -17,14 +17,14 @@ function UsersRoute() {
   const [ user, setUser ] = useState<User>();  
 
 
-    useEffect(() => {
-      if(email && password1) {
-        fetchUser(email, password1).then(res => setUser(res));
-      }
-      else if(!email || ! password1) {
-        alert('No user found. Would you like to create a profile?');
-      }
-    }, [email, password1]);
+    // useEffect(() => {
+    //   if(email && password1) {
+    //     fetchUser(email, password1).then(res => setUser(res));
+    //   }
+    //   else if(!email || ! password1) {
+    //     alert('No user found. Would you like to create a profile?');
+    //   }
+    // }, [email, password1]);
   
     return (
       <div className="UserProfileRoute">
