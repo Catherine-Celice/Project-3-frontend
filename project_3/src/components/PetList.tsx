@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, SetStateAction, useMemo } from "react";
+import { useState, useEffect, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import Pet from "../models/pet";
 import { getAllPets } from '../services/PetService'
@@ -6,19 +6,25 @@ import TinderCard from 'react-tinder-card'
 import React from "react";
 import '../styles/PetList.css';
 import DesktopNav from "./DesktopNav";
+import { UserContext } from "../context/UserContextProvider";
 
 
 function PetList() {
   const [pets, setPets] = useState<Pet[]>([]);
-  const [lastDirection, setLastDirection] = useState<string>();
+  const { user, addFavPet, removeFavPet } = useContext(UserContext);
 
-  const swiped = (direction: string, idToDelete: string) => {
-    console.log('Direction', direction, 'NameToDelete', idToDelete);
+  const swiped = (direction: string, petId: string) => {
+    if(user.isLoggedIn){
     if (direction === 'right') {
-      // addToFavorites()
-    }
-    console.log('removing: ' + idToDelete);
-    setLastDirection(direction)
+      addFavPet(petId);
+    }else if(direction === 'left') {
+      const index: number = pets.findIndex((pet) => pet.id === Number(petId));
+      setPets((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
+      console.log(pets.length);
+    }    
+    }else(
+      alert('Please login to add favorites.')
+    )
   }
 
   const outOfFrame = (name: string) => {
@@ -61,11 +67,12 @@ function PetList() {
     <>
     <DesktopNav></DesktopNav>
     <div>
+    <p>{user.firstname} {user.lastname}</p>
       <div className="Discover">
       <h1 className="Disch1">Discover</h1>
         <div className='cardContainer'>
           {pets.map((pet) =>
-            <TinderCard className='swipe' key={pet.id} onSwipe={(dir) => swiped(dir, String(pet.id))} onCardLeftScreen={() => outOfFrame(pet.name)}>
+            <TinderCard className='swipe' key={pet.id} onSwipe={(dir) => swiped(dir, String(pet.id))} onCardLeftScreen={() => outOfFrame(String(pet.id))}>
               {pet.photos!?.length > 0
                 ? <div className='card' id='cardimg' style={{ backgroundImage: 'url(' + pet.photos[0].large + ')' }} onClick={() => handleRoute(String(pet.id))}>
                   <div className="cardContent">

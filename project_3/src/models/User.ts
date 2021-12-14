@@ -2,6 +2,7 @@ import Preferences from './preferences';
 
 export default interface User {
     _id?: string;
+    isLoggedIn: boolean;
     firstname: string;
     lastname: string;
     email: string;
@@ -11,7 +12,7 @@ export default interface User {
     zip?: string;
     aboutme?: string;
     preferences?: Preferences;
-    petList?: string[];
+    petList: string[];
 };
 // CAC: In this (frontend) version of the User I declared _id to be a string rather
 // than an ObjectId because that is what Megan did in her firebase lab code.
