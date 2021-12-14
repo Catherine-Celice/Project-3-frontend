@@ -13,7 +13,11 @@
 }
 
 .PetProfileContent {
-    background-color: #fef0e9;
+    /* background-color: #fef0e9; */
+    /* border-color: #E8E6EA; */
+    border-color: #FEF0e9;
+    border-style: solid;
+    border-width: 2px;
     border-radius: 15px;
     padding: 40px 20px;
     margin: auto;
@@ -61,7 +65,7 @@
 /* Mobile View */
 @media (max-width: 640px) and (min-width: 360px) {
     .PetProfileContent {
-        width: 75%;
+        width: 90%;
         margin: auto;
     }
 

@@ -8,6 +8,7 @@ import UsersList from "./UsersList";
 import { addUser } from "../services/UserService";
 import '../styles/CreateYourUserProfile.css';
 import CreateYourUserProfileInput from './CreateYourUserProfileInput';
+import DesktopNav from "./DesktopNav";
 
 
 function checkPasswords(p1: string, p2: string): boolean {
@@ -71,26 +72,41 @@ function CreateYourUserProfile() {
   } // end of handleSubmit
 
   return (
-    <form className="CPform" onSubmit={handleSubmit}>
-      <h2>Create Your Profile</h2>
+    <>
+      <DesktopNav></DesktopNav>
+      <form className="CPform" onSubmit={handleSubmit}>
+        <div className="CreateProfile">
+          <h1>Create Your Profile</h1>
+          <div className="CPFormInputs">
+            <div className="CPGroup">
+              <CreateYourUserProfileInput label="First Name" id="CPForm_firstname" value={firstname} onChange={setFirstname} required minlength={2} />
+              <CreateYourUserProfileInput label="Last Name" id="CPForm_lastname" value={lastname} onChange={setLastname} required minlength={2} />
+            </div>
+            <div className="CPGroup">
+              <CreateYourUserProfileInput label="Email Address" id="CPForm_email" value={email} onChange={setEmail} required minlength={3} />
+            </div>
+            <div className="CPGroup">
+            <CreateYourUserProfileInput label="Password" id="CPForm_password1" value={password1} onChange={setPassword1} required minlength={2} />
+            <CreateYourUserProfileInput label="Confirm Password" id="CPForm_password2" value={password2} onChange={setPassword2} required minlength={2} />
+            </div>
+            <div className="CPGroup">
+            <CreateYourUserProfileInput label="Phone Number" id="CPForm_phone" value={phone} onChange={setPhone} required minlength={0} />
+            <CreateYourUserProfileInput label="Zip Code" id="CPForm_zip" value={zip} onChange={setZip} required minlength={5} />
+            </div>
+            <CreateYourUserProfileInput label="About Me" id="CPForm_aboutMe" value={aboutMe} onChange={setAboutMe} required minlength={0} />
+            {/* Why is this here? (below) */}
+            <p className="CYUPInput">
+              <label htmlFor="CreateYourUserProfile_user">Register</label>
 
-      <CreateYourUserProfileInput label="firstname" id="CPForm_firstname" value={firstname} onChange={setFirstname} required minlength={2} />
-      <CreateYourUserProfileInput label="lastname" id="CPForm_lastname" value={lastname} onChange={setLastname} required minlength={2} />
-      <CreateYourUserProfileInput label="email" id="CPForm_email" value={email} onChange={setEmail} required minlength={3} />
-      <CreateYourUserProfileInput label="phone" id="CPForm_phone" value={phone} onChange={setPhone} required minlength={0} />
-      <CreateYourUserProfileInput label="password1" id="CPForm_password1" value={password1} onChange={setPassword1} required minlength={2} />
-      <CreateYourUserProfileInput label="password2" id="CPForm_password2" value={password2} onChange={setPassword2} required minlength={2} />
-      <CreateYourUserProfileInput label="zip" id="CPForm_zip" value={zip} onChange={setZip} required minlength={5} />
-      <CreateYourUserProfileInput label="aboutMe" id="CPForm_aboutMe" value={aboutMe} onChange={setAboutMe} required minlength={0} />
-      <p className="CYUPInput">
-        <label htmlFor="CreateYourUserProfile_user">Register</label>
-
-        <textarea id="AddAboutMe__aboutMe" value={aboutMe} onChange={e => setAboutMe(e.target.value)} required minLength={0} rows={0} />
-      </p>
-      <p>
-        <button>Register!</button>
-      </p>
-    </form>
+              <textarea id="AddAboutMe__aboutMe" value={aboutMe} onChange={e => setAboutMe(e.target.value)} required minLength={0} rows={0} />
+            </p>
+            <p>
+              <button>Register!</button>
+            </p>
+          </div>
+        </div>
+      </form>
+    </>
   )
 
 

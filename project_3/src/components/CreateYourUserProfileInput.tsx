@@ -1,3 +1,5 @@
+import '../styles/CreateYourUserProfileInput.css';
+
 interface Props {
     label: string;
     id: string;
