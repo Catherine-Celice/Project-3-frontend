@@ -16,8 +16,8 @@ const getToken = () => {
     ? axios
         .post(`${authUrl}`, {
           grant_type: "client_credentials",
-          client_id: "hihSOZ24DJbcyTbjQwIABxjHBSX3TpUunzV3NidatCknCokd8t",
-          client_secret: "B0mgsBNG8M50vpQ6bBF31xWGmQLnXyP4LTtB9Evf",
+          client_id: "HzeuMtWMsk9qh8gIU9FsvskgawVJE7dLfTRIxOJjlA8YPpsmnx",
+          client_secret: "FkmY4Byw5ARsHOwA5nnklQwy7M7cA0Fkrx1gCiOM",
         })
         .then((response) => {
           const data = response.data;
@@ -48,12 +48,14 @@ export function getAllPets(latitude:number, longitude:number): Promise<Pet[]> {
 }
 
 export function getPetDetail(petId: string): Promise<Pet> {
+  console.log(petId);
     return getToken().then((token) => {
   return axios.get(`${baseUrl}/${petId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   }).then((response) => {
+    console.log(`${baseUrl}/${petId}`);
     return response.data.animal;
   });
   });
@@ -104,6 +106,27 @@ export function searchAvailablePets(preferences:Preferences | undefined, locatio
     });
   }
 
+  // export function getFavoritePets(petIds: string[]) {
+  //   let petFavs:Promise<Pet>[] = [];
+  //   for(let i = 0; i < petIds.length; i++){
+  //   return getToken().then((token) => {
+  //     return axios.get(`${baseUrl}/${petIds[i]}`, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     }).then((response) => {
+  //       console.log('Line 116 - ', response.data.animal)
+  //       return response.data.animal;
+  //     });
+  //     }).then((response) => {
+  //       console.log('Line 119 - ',response)
+  //       petFavs.push(response);
+  //     });
+  //   }
+  //   console.log('Line 124 --- ', petFavs.toString);
+  //   return petFavs;
+  //   }
+ 
 export const empty = (x: string) =>
   !Object.values(
     !isNaN(parseFloat(x))
