@@ -81,10 +81,14 @@ body {
     #DesktopImg {
       display: none;
     }
+
+    #orangebtn, #purplebtn {
+      width: 50vw;
+    }
   }
 
   /* Mobile view */
-@media (max-width: 640px) and (min-width: 320px) {
+@media (max-width: 640px) and (min-width: 300px) {
   h2 {
     margin: 0px;
     color: #F27121;
@@ -136,7 +140,7 @@ body {
   }
  
   #orangebtn, #purplebtn {
-    width: 70vw;
+    width: 60vw;
     font-size: 16px;
     margin: 10px 0px;
   }

@@ -1,4 +1,4 @@
-.CreateProfile {
+.loginPage {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -15,46 +15,31 @@
     border-radius: 15px; */
 }
 
-.CPFormInputs {
-    width: 80%;
+.loginform {
     display: flex;
     flex-direction: column;
 }
 
-.CPFormInputs > *{
-    display: flex;
-    flex-direction: row;
+input[type="submit"][className="SignIn"]{
+        font-family: 'Montserrat';
+        font-weight: bold;
+        border-radius: 15px;
+        color: white;
+        border: none;
+        padding: 15px;
+        margin: 0px 20px 0px 0px;
 }
-
-#CPForm_aboutMe {
-    max-width: 97%;
-    height: 50px;
-}
-
 
  /* Tablet view */
  @media (max-width: 1024px) and (min-width: 641px) {
-     .CreateProfile {
-         width: 550px;
-     }
-
-     #CPForm_aboutMe {
-        max-width: 78%;
+    .loginPage {
+        width: 600px;
     }
  }
 
   /* Mobile view */
 @media (max-width: 640px) and (min-width: 320px){
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .CreateProfile {
+    .loginPage {
         width: 75vw;
-    }
-
-    .CPFormInputs > *{
-        display: flex;
-        flex-direction: column;
     }
 }
