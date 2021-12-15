@@ -11,7 +11,7 @@
   /* position: fixed;
   top: 5%; */
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
   justify-content:space-evenly;
@@ -58,6 +58,12 @@ button {
   border: none;
   padding: 15px;
   margin: 0px 20px 0px 0px;
+}
+
+input[type="text"] {
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+  height: 25px;
 }
 
 .textLink {
@@ -111,32 +117,6 @@ button {
   position: absolute;
   bottom: 14px;
 }
-
-
-
-  /* Homepage */
-  /* .Homepage {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .HeroContent {
-    margin: 100px 0px;
-    max-width: 500px;
-    min-width: 300px;
-  }
-
-  .HomeImg {
-    max-width: 50%;
-  }
-
-  .homebtns {
-    justify-content: space-around;
-  }
-
-  .signin {
-    display: flex;
-  } */
 
 /* Tablet view */
   @media (max-width: 1024px) and (min-width: 641px) {

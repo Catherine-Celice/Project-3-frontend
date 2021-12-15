@@ -29,13 +29,13 @@ function PetProfile() {
       <DesktopNav></DesktopNav>
       {pet &&
         <div className="PetProfile">
-          <button className="BackBtn" onClick={() => navigate(-1)}>Back</button>
+          {/* <button className="BackBtn" onClick={() => navigate(-1)}>Back</button> */}
           <div className="ProfileCard">
             <div className="PetProfileImages">
               <p>{pet.photos.map((pics) => { return <img style={{ width: "auto", height: "270px" }} className='petPic' src={pics.large} alt="pet" /> })}</p>
             </div>
             <div className="noyes">
-              <div className="dislike"><img className="noyesIcon" src="/images/Avatars/dislike.png" width="120" /></div>
+              <div className="dislike" onClick={() => navigate(-1)}><img className="noyesIcon" src="/images/Avatars/dislike.png" width="120" /></div>
               <div className="like"><img className="noyesIcon" src="/images/Avatars/like.png" width="120" /></div>
             </div>
             <div className="PetProfileContent">
