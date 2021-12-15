@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import '../styles/DesktopNav.css';
-import { Link } from "react-router-dom"; {/*added Link*/}
-
+import { Link } from "react-router-dom";import { UserContext } from "../context/UserContextProvider";
+ {/*added Link*/}
 
 function DesktopNav(){
+    const { user } = useContext(UserContext);
     return (
         <div>
             <nav>
@@ -12,7 +13,10 @@ function DesktopNav(){
                 <div className="NavBarLinks">
                     <a><Link to="/viewpets" id="NavPets">Available Pets</Link></a>
                     <a><Link to="/myprofile" id="NavProfile">My Profile</Link></a>
-                    <button className="navSignUp"><Link to="/signup" className="buttons">Sign Up</Link></button>
+                    { user.isLoggedIn ?
+                      <button className="navSignUp">Welcome {user.firstname}</button>
+                    : <button className="navSignUp"><Link to="/signup" className="buttons">Sign Up</Link></button>
+                    }
                 </div>
                 </div>
             </nav>

@@ -1,30 +1,35 @@
 import { useState, useEffect, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import Pet from "../models/pet";
-import { getAllPets } from '../services/PetService'
+import { getAllPets, searchAvailablePets } from '../services/PetService'
 import TinderCard from 'react-tinder-card'
 import React from "react";
 import '../styles/PetList.css';
 import DesktopNav from "./DesktopNav";
 import { UserContext } from "../context/UserContextProvider";
-
+import Popup from "./Popup";
 
 function PetList() {
   const [pets, setPets] = useState<Pet[]>([]);
-  const { user, addFavPet, removeFavPet } = useContext(UserContext);
+  const [lat, setLat] = useState<number>(42.328385);
+  const [long, setLong] = useState<number>(-83.044322);
+  const { user, addFavPet } = useContext(UserContext);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
 
   const swiped = (direction: string, petId: string) => {
     if(user.isLoggedIn){
     if (direction === 'right') {
       addFavPet(petId);
+      setIsOpen(true);
     }else if(direction === 'left') {
       const index: number = pets.findIndex((pet) => pet.id === Number(petId));
       setPets((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
       console.log(pets.length);
     }    
-    }else(
-      alert('Please login to add favorites.')
-    )
+    }else{
+      console.log(direction);
+    }
   }
 
   const outOfFrame = (name: string) => {
@@ -34,40 +39,46 @@ function PetList() {
   const navigate = useNavigate();
 
   function getPetList() {
-    getAllPets().then((data) => {
+    getAllPets(lat,long).then((data) => {
+      setPets(data);
+    });
+  }
+  
+  function getPetMatches() {
+    searchAvailablePets(user.preferences, user.zip).then((data) => {
       setPets(data);
     });
   }
 
   useEffect(() => {
-    getPetList();
-  }, []);
+    if(user.isLoggedIn){
+      getPetMatches();
+    }else{
+            navigator.geolocation.getCurrentPosition((pos) =>{
+            console.log(pos.coords.latitude + " " + pos.coords.longitude) // display VALUE
+            setLat(pos.coords.latitude);
+            setLong(pos.coords.longitude) 
+       }, (err) => {
+            console.log(err);
+       });
+      getPetList();
+    }
+  }, [lat, long]);
 
   const handleRoute = (petId: string) => {
     navigate(`/viewpets/${petId}`);
   }
 
-  // return (
-  //   <>
-  //   <div className="PetList">
-  //     <ul style={{listStyle: "none"}}> 
-  //       {pets.map(pet => <li key={pet.id}>
-  // { pet.photos!?.length > 0 ? <img style={{width:"150px", height:"150px"}} className='petPic'src={pet.photos[0].large} alt="pet" onClick={() => handleRoute(String(pet.id))}/> 
-  //   :  <img style={{width:"150px", height:"150px"}} className='petPic'src="/images/Avatars/dog1_avatar.png" alt="pet" onClick={() => handleRoute(String(pet.id))}/> 
-  // }
-  //         <p className='petName'>{pet.name}, {pet.age}</p>
-  //         <p className='petBreed'>{pet.breeds.primary}</p>
-  //         <p className='petLocation'>{pet.contact?.address.postcode}</p>
-  //       </li>)}
-  //     </ul>
-  //   </div>
-  //   </>
-  // );
   return (
     <>
     <DesktopNav></DesktopNav>
+    { isOpen && <Popup 
+      handleClose={() => {setIsOpen(!isOpen)}}
+      content={<div>
+        <h3>Pet has been added to Favorites.</h3>
+      </div>}
+    />}
     <div>
-    <p>{user.firstname} {user.lastname}</p>
       <div className="Discover">
       <h1 className="Disch1">Discover</h1>
         <div className='cardContainer'>

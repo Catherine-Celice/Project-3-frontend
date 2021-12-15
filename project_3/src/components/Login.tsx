@@ -35,7 +35,6 @@ export default function Login() {
           user.petList = response.petList;
         }
         navigate(`/viewpets`);
-        console.log(user);
       }) //end of then
       .catch((error) => {
         if (error.response && error.response.status === 404) {
