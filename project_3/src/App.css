@@ -82,6 +82,7 @@ input[type="text"] {
   background-color: #F27121;
   width: 220px;
   height: 55px;
+  margin-bottom: 16px;
 }
 
 #purplebtn {
@@ -107,14 +108,14 @@ input[type="text"] {
 #cat {
   display: block;
   box-sizing: border-box;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0px;
 }
 
 #dog {
   display: block;
   box-sizing: border-box;
-  position: absolute;
+  /* position: absolute; */
   bottom: 14px;
 }
 
@@ -136,12 +137,12 @@ input[type="text"] {
     }
 
     #cat {
-      position: absolute;
+      /* position: absolute; */
       bottom: 0px;
     }
     
     #dog {
-      position: absolute;
+      /* position: absolute; */
       bottom: 12px;
     }
   }
@@ -184,12 +185,12 @@ input[type="text"] {
 
   /* Formatting for the Avatar author recognition at the bottom of the page */
   #cat {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0px;
   }
 
   #dog {
-    position: absolute;
+    /* position: absolute; */
     bottom: 12px;
   }
 
