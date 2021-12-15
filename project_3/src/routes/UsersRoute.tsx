@@ -27,14 +27,16 @@ function UsersRoute() {
     // }, [email, password1]);
   
     return (
-      <div className="UserProfileRoute">
-        <h2>User Profile</h2>
-        <UsersList/>
-        <PreferencesForm/>
-        {/* <UsersList user={user!}/> */}
-        <div className="UserProfile__button">
-          <button className="UserList__backButton"><Link to="/" className="buttons">Home</Link></button>
-          <button className="UserList__editButton" ><Link to="/" className="buttons">Edit</Link></button>
+      <div className="UserProfileRoute__body">
+        <div className="UserProfileRoute">
+         
+          <UsersList/>
+          <PreferencesForm/>
+          {/* <UsersList user={user!}/> */}
+          <div className="UserProfile__button">
+            <button className="UserList__backButton"><Link to="/" className="buttons">Home</Link></button>
+            <button className="UserList__editButton" ><Link to="/" className="buttons">Edit</Link></button>
+          </div>
         </div>
       </div>
     );

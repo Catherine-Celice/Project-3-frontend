@@ -1,8 +1,16 @@
+Readme
+______________________________________________________________________________________________
 
+Setup for Toggle Switches
+In order for ToggleSwitch.tsx to work please install the following:
 
-initial file
-nothing set up yet
+Windows machines:
+npm add node-sass
+npm add prop-types
 
+McIntosh machines:
+npm install prop-types
+______________________________________________________________________________________________
 
 Please save all of the information below for future reference.
 (1)

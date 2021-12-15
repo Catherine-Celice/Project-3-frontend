@@ -23,6 +23,9 @@ import DesktopNav from "./DesktopNav";
   return (
     <>
     <div className="UserProfile">
+      <div className="UserProfile__header">
+        <h2>User Profile</h2>
+      </div>
       <div className="Profile">
          <span>
           <img className="UserList__image" src={`../images/Avatars/${users[0].image}.png`} />
