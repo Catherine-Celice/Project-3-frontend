@@ -95,13 +95,13 @@ function CreateYourUserProfile() {
             </div>
             <CreateYourUserProfileInput label="About Me" id="CPForm_aboutMe" value={aboutMe} onChange={setAboutMe} required minlength={0} />
             {/* Why is this here? (below) */}
-            <p className="CYUPInput">
-              <label htmlFor="CreateYourUserProfile_user">Register</label>
+            {/* <p className="CYUPInput">
+              <label htmlFor="CreateYourUserProfile_user"></label>
 
-              <textarea id="AddAboutMe__aboutMe" value={aboutMe} onChange={e => setAboutMe(e.target.value)} required minLength={0} rows={0} />
-            </p>
+              <textarea id="AddAboutMe__aboutMe" value={aboutMe} onChange={e => setAboutMe(e.target.value)} required minLength={0} rows={5} />
+            </p> */}
             <p>
-              <button>Register!</button>
+              <button className="Register" id="purplebtn">Register</button>
             </p>
           </div>
         </div>
@@ -115,3 +115,7 @@ function CreateYourUserProfile() {
 
 
 export default CreateYourUserProfile;
+function handleRoute(arg0: string): void {
+  throw new Error("Function not implemented.");
+}
+

@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContextProvider";
 import { fetchUser } from "../services/UserService";
 import CreateYourUserProfileInput from "./CreateYourUserProfileInput";
+import DesktopNav from "./DesktopNav";
+import '../styles/Login.css';
 
 export default function Login() {
   const { user } = useContext(UserContext);
@@ -43,12 +45,15 @@ export default function Login() {
   }
 
   return (
+    <>
+    <DesktopNav></DesktopNav>
     <div className="loginPage">
       <form className="loginform" onSubmit={handleSubmit}>
-        <h2>Enter your log in credentials here</h2>
+        <h1>Sign In</h1>
 
         <CreateYourUserProfileInput
-          label="email"
+          // label="email"
+          label="Email Address"
           id="CPForm_email"
           value={email}
           onChange={setEmail}
@@ -56,7 +61,8 @@ export default function Login() {
           minlength={3}
         />
         <CreateYourUserProfileInput
-          label="password1"
+          // label="password1"
+          label="Password"
           id="CPForm_password1"
           value={password1}
           onChange={setPassword1}
@@ -65,14 +71,15 @@ export default function Login() {
         />
 
         <p>
-        <input type="submit" value="Sign In"/>
+        <input type="submit" className="SignIn" id="purplebtn" value="Sign In"/>
         </p>
       </form>
 
       {/* How do we put a message here only if the log in is unsuccessful*/}
       <div>
-        <h2 className="loginMsg">{message}</h2>
+        <h4 className="loginMsg">{message}</h4>
       </div>
     </div>
+    </>
   );
 }
