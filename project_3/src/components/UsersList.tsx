@@ -22,6 +22,7 @@ import DesktopNav from "./DesktopNav";
 
   return (
     <>
+    {/* <DesktopNav></DesktopNav> */}
     <div className="UserProfile">
       <div className="UserProfile__header">
         <h2>User Profile</h2>
