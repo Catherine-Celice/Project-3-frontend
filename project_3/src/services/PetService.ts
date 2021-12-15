@@ -1,10 +1,15 @@
 import Pet from "../models/pet";
 import axios from "axios";
+import Preferences from "../models/preferences";
 
 let token:string;
 let expires: number;
 let authUrl = "https://api.petfinder.com/v2/oauth2/token";
 const baseUrl = "https://api.petfinder.com/v2/animals";
+const endParams = `&limit=75&distance=50&sort=distance`;
+// https://api.petfinder.com/v2/animals/?limit=75&location=48219&?sort=distance
+// https://api.petfinder.com/v2/animals/?location=48219&distance=50&sort=distance&good_with_children=true
+// https://api.petfinder.com/v2/animals/?location=48219&distance=50&sort=distance&limit=75
 
 const getToken = () => {
   return empty(token) || new Date().getTime() >= expires
@@ -26,10 +31,12 @@ const getToken = () => {
     : new Promise((r) => r(token));
 };
 
-export function getAllPets(): Promise<Pet[]> {
+export function getAllPets(latitude:number, longitude:number): Promise<Pet[]> {
+  console.log(latitude, longitude);
+  console.log(`${baseUrl}/?location=${latitude},${longitude}${endParams}`);
   return getToken().then((token) => {
     return axios
-      .get(`${baseUrl}`, {
+      .get(`${baseUrl}/?location=${latitude},${longitude}${endParams}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -51,51 +58,51 @@ export function getPetDetail(petId: string): Promise<Pet> {
   });
   });
 }
-export function searchAvailablePets(
-  type: string,
-  age: string,
-  gender: string,
-  size: string,
-  goodWithChildren: string,
-  goodWithDogs: string,
-  goodWithCats: string,
-  location: string
+export function searchAvailablePets(preferences:Preferences | undefined, location:string | undefined
+  // type: string | undefined,
+  // age: string | undefined,
+  // gender: string | undefined,
+  // size: string | undefined,
+  // goodWithChildren: string | undefined,
+  // goodWithDogs: string | undefined,
+  // goodWithCats: string | undefined,
+  // location: string | undefined
+  // https://api.petfinder.com/v2/animals/?location=48219&distance=50&sort=distance&good_with_children=true
 ): Promise<Pet[]> {
-  // https://api.petfinder.com/v2/animals?type=dog&size=Medium&gender=Male
-  let query = "";
-  if (type) {
-    query.concat(`?type=${type}`);
-  }
-  if (gender) {
-    query.concat(`?gender=${gender}`);
-  }
-  if (age) {
-    query.concat(`?age=${age}`);
-  }
-  if (size) {
-    query.concat(`?size=${size}`);
-  }
-  if (goodWithChildren) {
-    query.concat(`?good_with_children=${goodWithChildren}`);
-  }
-  if (goodWithDogs) {
-    query.concat(`?good_with_dogs=${goodWithDogs}`);
-  }
-  if (goodWithCats) {
-    query.concat(`?good_with_cats=${goodWithCats}`);
-  }
+  let query = "?";
   if (location) {
-    query.concat(`?location=${location}`);
+    console.log(location);
+    query = query.concat(`location=${location}`);
   }
-
-  return axios.get(`${baseUrl}/${query}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  }).then((response) => {
-    return response.data.animals;
-  });
-}
+  if (preferences?.species) {
+      query = query.concat(`&type=${preferences.species}`);
+  }
+  if (preferences?.gender) {
+    query = query.concat(`&gender=${preferences.gender}`);
+  }
+  if (preferences?.age) {
+    query = query.concat(`&age=${preferences.age}`);
+  }
+  if (preferences?.size) {
+    query = query.concat(`&size=${preferences.size}`);
+  }
+  if (preferences?.kids) {
+    query = query.concat(`&good_with_children=${preferences.kids}`);
+  }
+  if (preferences?.pet) {
+    query = query.concat(`&good_with_dogs=${preferences?.pet}`);
+    query = query.concat(`&good_with_cats=${preferences?.pet}`);
+  }  
+  return getToken().then((token) => {
+    return axios.get(`${baseUrl}/${query}${endParams}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }).then((response) => {
+      return response.data.animals;
+    });
+    });
+  }
 
 export const empty = (x: string) =>
   !Object.values(
