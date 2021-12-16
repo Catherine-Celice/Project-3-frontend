@@ -62,6 +62,7 @@ function CreateYourUserProfile() {
       setEmail("");
       setPhone("");
       setPassword1("");
+      setPassword2("");
       setZip("");
       setAboutMe("");
 

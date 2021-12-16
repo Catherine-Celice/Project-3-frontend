@@ -10,16 +10,17 @@ interface Props {
  onSubmit: (user: User) => void;
 }
 
-//function UsersList({user}: Props) {
-  function UsersList({onSubmit}: Props) {
+// function UsersList({user}: Props) {
+function UsersList({onSubmit}: Props) {
       
-     const [users, setUsers] = useState<User[]>([
+  //    const [users, setUsers] = useState<User[]>([
     //   {image: "cat1_avatar", firstname: "Hanna", lastname: "Svendor", email: "Hanna123@gmail.com", phone: "123-456-1234", password1: "newpassword"},
     //   {image: "dog1_avatar", firstname: "Salena", lastname: "Galloway", email: "Salena123@gmail.com", phone: "987-654-1234", password1: "password1"},
-      {image: "cat2_avatar", firstname: "Heidi", lastname: "Youmans", email: "Heidi123@gmail.com", phone: "345-789-1234", password1: "i8T00MUCH", isLoggedIn: true, petList:[]},
+      // {image: "cat2_avatar", firstname: "Heidi", lastname: "Youmans", email: "Heidi123@gmail.com", phone: "345-789-1234", password1: "i8T00MUCH", isLoggedIn: true, petList:[]},
     //   {image: "dog2_avatar", firstname: "Catherine", lastname: "Celice", email: "Catherine123@gmail.com", phone: "875-423-1234", password1: "TooMuchProgramming"},
-     ]);
-
+    //  ]);
+    const [user, setUser] = useState();
+    const [image, setImage] = useState();
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
@@ -59,7 +60,7 @@ interface Props {
         </div>
         <div className="Profile">
           <span>
-            <img className="UserList__image" src={`../images/Avatars/${users[0].image}.png`} />
+            <img className="UserList__image" src={`../images/Avatars/${image}`} />
           </span>
           <p>
             <label htmlFor="UserListForm__first">
