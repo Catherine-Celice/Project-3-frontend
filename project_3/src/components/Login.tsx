@@ -69,9 +69,9 @@ export default function Login() {
           minlength={2}
         />
 
-        <p>
-        <input type="submit" className="SignIn" id="purplebtn" value="Sign In"/>
-        </p>
+        {/* <p> */}
+        <button id="purplebtn"><input type="submit" value="Sign In"/></button>
+        {/* </p> */}
       </form>
 
       {/* How do we put a message here only if the log in is unsuccessful*/}

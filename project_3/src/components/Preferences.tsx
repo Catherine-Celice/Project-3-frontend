@@ -87,7 +87,7 @@ function PreferencesForm() {
                     </p>
                     <p>
                         <ToggleSwitch id="pupkit" checked={pupkit} onChange={onPupKitChange} />
-                        <label htmlFor="pupkit">Puppy/Kitten</label>
+                        <label htmlFor="pupkit">Baby</label>
                     </p>
                     <p>
                         <ToggleSwitch id="young" checked={young} onChange={onYoungChange} />
