@@ -17,13 +17,17 @@ export function fetchUser(email: string, password1: string):Promise<User> {
 export function addUser(newUser:User):Promise<User> {
     return axios.post(`${baseUrl}/users`, newUser).then(res => res.data);
   }
+// HSY -- added for the user profile
+export function updateUser(email: string, password1: string):Promise<User> {
+  return axios.put(`${baseUrl}/user/${email}/${password1}`).then(res => res.data);
+}
 
-  export function addFavoritePet(email: string, password: string, petId: string):Promise<User>{
-    console.log(`${baseUrl}/addpet/${email}/${password}`);
-    return axios.put(`${baseUrl}/addpet/${email}/${password}?petList=${petId}`).then(res => res.data);
-  }
-  
-  export function removeFavoritePet(email: string, password: string, petId: string):Promise<User>{
-    return axios.put(`${baseUrl}/removepet/${email}/${password}?petList=${petId}`).then(res => res.data);
-  }
+export function addFavoritePet(email: string, password: string, petId: string):Promise<User>{
+  console.log(`${baseUrl}/addpet/${email}/${password}`);
+  return axios.put(`${baseUrl}/addpet/${email}/${password}?petList=${petId}`).then(res => res.data);
+}
+
+export function removeFavoritePet(email: string, password: string, petId: string):Promise<User>{
+  return axios.put(`${baseUrl}/removepet/${email}/${password}?petList=${petId}`).then(res => res.data);
+}
 
