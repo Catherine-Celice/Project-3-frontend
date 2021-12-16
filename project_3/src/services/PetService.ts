@@ -6,7 +6,7 @@ let token:string;
 let expires: number;
 let authUrl = "https://api.petfinder.com/v2/oauth2/token";
 const baseUrl = "https://api.petfinder.com/v2/animals";
-const endParams = `&limit=75&distance=50&sort=distance`;
+const endParams = `&limit=30&distance=50&sort=distance`;
 // https://api.petfinder.com/v2/animals/?limit=75&location=48219&?sort=distance
 // https://api.petfinder.com/v2/animals/?location=48219&distance=50&sort=distance&good_with_children=true
 // https://api.petfinder.com/v2/animals/?location=48219&distance=50&sort=distance&limit=75
@@ -16,8 +16,8 @@ const getToken = () => {
     ? axios
         .post(`${authUrl}`, {
           grant_type: "client_credentials",
-          client_id: "hihSOZ24DJbcyTbjQwIABxjHBSX3TpUunzV3NidatCknCokd8t",
-          client_secret: "B0mgsBNG8M50vpQ6bBF31xWGmQLnXyP4LTtB9Evf",
+          client_id: "mKNaWHU7Ii39L4bNXI9FIqUsHHsKZ1EcINEfPYr3kPZVA5ot2N",
+          client_secret: "5mzDyFSm5Ln34CnUyxMwzVfry1B5Ex7sdmmqwYHf",
         })
         .then((response) => {
           const data = response.data;
