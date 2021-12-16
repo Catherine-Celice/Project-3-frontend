@@ -60,6 +60,21 @@ export function getPetDetail(petId: string): Promise<Pet> {
   });
   });
 }
+
+export function getPetFavorites(petList:string[]):Pet[] {
+  let favPets:Pet[] = [];
+  if(petList.length > 0){
+      for(let i=0; i < petList.length; i++){
+      getPetDetail(petList[i]).then((data) => {
+          favPets.push(data);
+        });
+        }
+    }
+    console.log(favPets);
+    return favPets;
+}
+
+
 export function searchAvailablePets(preferences:Preferences | undefined, location:string | undefined
   // type: string | undefined,
   // age: string | undefined,
