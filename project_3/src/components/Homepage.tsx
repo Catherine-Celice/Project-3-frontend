@@ -27,7 +27,7 @@ function Homepage() {
             </div>
             <div id="acclaim">
       <div>
-        <a id="dog" href='https://www.freepik.com/vectors/icons'>Icons vector created by rawpixel.com - www.freepik.com</a>
+        <a id="dog" href='https://www.freepik.com/vectors/icons'>Icons vector created by rawpixel.com - www.freepik.com</a><br></br>
         <a id="cat" href='https://www.freepik.com/vectors/animals'>Animals vector created by agnessz_arts - www.freepik.com</a>
       </div>
     </div>

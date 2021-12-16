@@ -18,6 +18,7 @@
 .loginform {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 input[type="submit"][className="SignIn"]{
@@ -43,3 +44,5 @@ input[type="submit"][className="SignIn"]{
         width: 75vw;
     }
 }
+
+ 

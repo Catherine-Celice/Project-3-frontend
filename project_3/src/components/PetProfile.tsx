@@ -41,7 +41,7 @@ function PetProfile() {
       <DesktopNav></DesktopNav>
       { isOpen && <Popup 
       handleClose={() => {setIsOpen(!isOpen)}}
-      content={<div><h3>Pet has been added to Favorites.</h3>
+      content={<div><h4 className="popup-text">Pet has been added to your favorites.</h4>
       </div>}
     />}
       {pet &&
