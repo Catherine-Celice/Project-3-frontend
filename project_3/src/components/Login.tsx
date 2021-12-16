@@ -5,6 +5,8 @@ import { fetchUser } from "../services/UserService";
 import CreateYourUserProfileInput from "./CreateYourUserProfileInput";
 import DesktopNav from "./DesktopNav";
 import '../styles/Login.css';
+import { getPetFavorites } from "../services/PetService";
+import { isConstructorDeclaration } from "typescript";
 
 export default function Login() {
   const { user } = useContext(UserContext);
@@ -33,6 +35,7 @@ export default function Login() {
           user.petList = [];
         } else {
           user.petList = response.petList;
+          user.petListDetails = getPetFavorites(user.petList);
         }
         navigate(`/viewpets`);
       }) //end of then

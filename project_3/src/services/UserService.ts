@@ -18,8 +18,8 @@ export function addUser(newUser:User):Promise<User> {
     return axios.post(`${baseUrl}/users`, newUser).then(res => res.data);
   }
 // HSY -- added for the user profile
-export function updateUser(email: string, password1: string):Promise<User> {
-  return axios.put(`${baseUrl}/user/${email}/${password1}`).then(res => res.data);
+export function updateUser(email: string, password1: string, updatedUser:User):Promise<User> {
+  return axios.put(`${baseUrl}/user/${email}/${password1}`, updateUser).then(res => res.data);
 }
 
 export function addFavoritePet(email: string, password: string, petId: string):Promise<User>{

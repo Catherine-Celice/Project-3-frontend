@@ -15,16 +15,14 @@ function UsersRoute() {
   //const history = useNavigate();
   const [ email, setEmail ] = useState<string>('');
   const [ password1, setPassword1 ] = useState<string>('');
- // const { user } = useContext(UserContext);
-  const [user, setUser] = useState<User>();
+  const { user } = useContext(UserContext);
+  // const [user, setUser] = useState<User>();
 
-  function UpdateUserProfile(user: User): void {
-    // setUser(prev => {user});
-    setUser(user);
-    updateUser(user.email, user.password1);
+  function UpdateUserProfile(): void {
+    updateUser(user.email, user.password1, user);
   };
     useEffect(() => {
-        fetchUser(email, password1).then(res => setUser(res));
+        // fetchUser(email, password1).then(res => setUser(res));
     });
   
     return (
