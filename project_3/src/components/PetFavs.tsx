@@ -14,12 +14,12 @@ function PetFavs() {
     <DesktopNav></DesktopNav>
       { isOpen && <Popup 
       handleClose={() => {setIsOpen(!isOpen)}}
-      content={<div><h3>Pet has been added to Favorites.</h3>
+      content={<div><h4>Pet has been added to your favorites.</h4>
       </div>}
     />}
       <h2 className=''>{user.firstname}'s Favorite Pets</h2>
       {user.petList.length === 0 ? (
-        <h3 className=''>There are no favorite pets.</h3>
+        <h4 className=''>Go favorite some pets!</h4>
       ) : (
         <div>
         <ol>

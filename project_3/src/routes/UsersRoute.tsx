@@ -35,6 +35,7 @@ function UsersRoute() {
           <PreferencesForm/>
           {/* <UsersList user={user!}/> */}
           <div className="UserProfile__button">
+          <button className="UserList__backButton"><Link to="/myfavoritepets" className="buttons">My Favorites</Link></button>
             <button className="UserList__backButton"><Link to="/" className="buttons">Home</Link></button>
           </div>
         </div>
