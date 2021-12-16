@@ -102,13 +102,19 @@
     z-index: 100;
   }
 
+  .popup-text {
+    margin: 20px 0px 0px 0px;
+  }
+
   .box{
     position: relative;
     width: 50%;
-    min-height: 300px;
-    background-color: #F27120;
-    border: 1px solid #8A2387;
-    border-radius: 4px;
+    min-height: 50px;
+    /* background-color: #FEF0e9;
+    border: 1px solid white; */
+    background-color: white;
+    border: 2px solid #FEF0e9;
+    border-radius: 15px;
     margin: 20px auto;
     padding: 20px;
     overflow: auto;
@@ -116,10 +122,12 @@
 
   .btn-close{
     cursor: pointer;
-    border: 1px solid  #999;
+    border: 1px solid  #F27021;
+    background-color: #F27021;
     border-radius: 50%;
     position: fixed;
-    right: calc(25% - 30px);
-    top: 15px;
+    right: calc(25% - 55px);
+    top: 12px;
+    padding: 5px 10px;
   }
 

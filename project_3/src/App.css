@@ -78,6 +78,14 @@ input[type="text"] {
   text-decoration: none;
 }
 
+input[type=submit]{
+  background-color: #8A2387;
+  font-family: Montserrat;
+  border-style: none;
+  color: white;
+  font-weight: bold;
+}
+
 #orangebtn {
   background-color: #F27121;
   width: 220px;
@@ -106,14 +114,14 @@ input[type="text"] {
 }
 
 #cat {
-  display: block;
+  /* display: block; */
   box-sizing: border-box;
   /* position: absolute; */
   bottom: 0px;
 }
 
 #dog {
-  display: block;
+  /* display: block; */
   box-sizing: border-box;
   /* position: absolute; */
   bottom: 14px;

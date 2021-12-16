@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'password';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+  }
+
+.CPForm_password1{
+    font-family: 'password';
+    width: 100px;
+    height: 16px;
+}
+
 .loginPage {
     display: flex;
     flex-direction: column;
@@ -18,6 +31,7 @@
 .loginform {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 input[type="submit"][className="SignIn"]{
