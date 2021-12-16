@@ -16,8 +16,8 @@ const getToken = () => {
     ? axios
         .post(`${authUrl}`, {
           grant_type: "client_credentials",
-          client_id: "HzeuMtWMsk9qh8gIU9FsvskgawVJE7dLfTRIxOJjlA8YPpsmnx",
-          client_secret: "FkmY4Byw5ARsHOwA5nnklQwy7M7cA0Fkrx1gCiOM",
+          client_id: "hihSOZ24DJbcyTbjQwIABxjHBSX3TpUunzV3NidatCknCokd8t",
+          client_secret: "B0mgsBNG8M50vpQ6bBF31xWGmQLnXyP4LTtB9Evf",
         })
         .then((response) => {
           const data = response.data;
