@@ -75,7 +75,7 @@ function PetList() {
     { isOpen && <Popup 
       handleClose={() => {setIsOpen(!isOpen)}}
       content={<div>
-        <h3>Pet has been added to Favorites.</h3>
+        <h4>Pet has been added to Favorites.</h4>
       </div>}
     />}
     <div>
